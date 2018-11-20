@@ -8,12 +8,6 @@ This is the NuKeeper AzureDevops - VSTS extension. It will allow you to run the 
 It's up to the user to schedule the pipeline in whatever is correct for there solution. 
 
 
-### Current status
-
-The extension current only supports the `repo` command. For a list of what is supported please see the [configuration page](https://github.com/NuKeeperDotNet/NuKeeper/wiki/Configuration#options)
-
-
-
 ### Acknowledgements
 
 Initial ground work done by [Manuel Riezebosch](https://github.com/riezebosch)
