@@ -10,7 +10,7 @@ It's up to the user to schedule the pipeline in whatever is correct for there so
 
 ### Current status
 
-The extension current only supports the 'repo' command. For a list of what is supported please see the [configuration page](https://github.com/NuKeeperDotNet/NuKeeper/wiki/Configuration#options)
+The extension current only supports the `repo` command. For a list of what is supported please see the [configuration page](https://github.com/NuKeeperDotNet/NuKeeper/wiki/Configuration#options)
 
 
 
