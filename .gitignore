@@ -1,0 +1,8 @@
+node_modules/
+*.js
+!stryker.conf.js
+!stryker.baseline.js
+*.d.ts
+*.vsix
+.taskkey
+.DS_Store

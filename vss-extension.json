@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 1,
+    "id": "nukeeper",
+    "name": "nukeeper",
+    "version": "0.1.29",
+    "publisher": "nukeeper",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Automagically update nuget packages in .NET projects",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "nukeeper"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/NuKeeperDotNet/NuKeeper"
+    },
+    "contributions": [
+        {
+            "id": "nukeeper",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "nukeeper"
+            }
+        }
+    ]
+}

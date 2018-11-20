@@ -1,0 +1,35 @@
+{
+    "id": "e5a17a66-903f-46a9-a9b9-94241bcedc39",
+    "name": "NuKeeper",
+    "friendlyName": "NuKeeper",
+    "description": "Automagically update nuget packages in .NET projects",
+    "category": "Tool",
+    "runsOn": [
+        "Agent",
+        "DeploymentGroup"
+    ],
+    "author": "NuKeeper",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 17
+    },
+    "demands": [],
+    "instanceNameFormat": "NuKeeper",
+    "inputs": [
+        {
+          "name": "arguments",
+          "type": "string",
+          "label": "Arguments",
+          "defaultValue": "",
+          "required": false,
+          "helpMarkDown": "Append extra configuration options"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "src/task.js",
+            "argumentFormat": ""
+        }
+    }
+}
