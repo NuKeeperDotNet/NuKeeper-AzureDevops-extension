@@ -16,4 +16,4 @@ The extension current only supports the `repo` command. For a list of what is su
 
 ### Acknowledgements
 
-Logos by [area55](https://github.com/area55git), licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+Initial ground work done by [Manuel Riezebosch](https://github.com/riezebosch)
