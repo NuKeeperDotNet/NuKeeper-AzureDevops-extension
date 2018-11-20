@@ -4,7 +4,7 @@
   "description": "NuKeeper AzureDevOps task",
   "main": "''",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "tsc -p . && tslint -p tsconfig.json",
     "build:prod": "npm i && npm run build && npm prune --production && npm dedupe",
     "pretest": "npm run build",
     "test": "mocha --recursive",
@@ -12,13 +12,15 @@
   },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
-    "chai": "^4.2.0",
     "@types/mz": "0.0.32",
+    "@types/sinon": "^5.0.5",
+    "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "rmdir": "^1.2.0",
+    "sinon": "^7.1.1",
+    "tslint": "^5.11.0",
     "typescript": "^3.1.6",
-    "@types/sinon": "^5.0.5",
-    "sinon": "^7.1.1"
+    "typestrict": "^1.0.1"
   },
   "repository": {
     "type": "git",
@@ -29,14 +31,13 @@
     "azure",
     "devops"
   ],
-  "author": "Manuel Riezebosch",
-  "license": "Apache-2.0",
+  "author": "NuKeeper",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/NuKeeperDotNet/NuKeeperAzureDevOps/issues"
   },
   "homepage": "https://github.com/NuKeeperDotNet/NuKeeperAzureDevOps#readme",
   "dependencies": {
-    "mz": "^2.7.0",
     "vsts-task-tool-lib": "^0.10.0"
   }
 }
