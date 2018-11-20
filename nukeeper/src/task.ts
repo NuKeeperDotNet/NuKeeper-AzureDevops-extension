@@ -19,16 +19,15 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
 }
 
 async function run() {
-    const targetBranchName = `${tl.getVariable('Build.DefinitionName')}/${tl.getVariable('Build.BuildId')}`;
-
-    try {
-        tl.exec("git", ["checkout", "-B", targetBranchName, tl.getVariable('Build.SourceVersion')]);
+   try {
+        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]); 
         tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
-        tl.exec("git", ["config", "--global", "user.email", "marc@marcbruins.nl"]);
+        tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
 
         tl.cd(tl.getVariable('Build.SourcesDirectory'))
         
         let token = tl.getEndpointAuthorizationParameter("SystemVssConnection", "AccessToken", false);
+
         await execNuKeeper([tl.getInput("command", true), tl.cwd(), token]);
 
         tl.setResult(tl.TaskResult.Succeeded, "done");
@@ -37,7 +36,6 @@ async function run() {
         tl.setResult(tl.TaskResult.Failed, err)
     } finally {
         tl.exec("git", ["checkout", "--progress", "--force", tl.getVariable('Build.SourceVersion')])
-        tl.exec("git", ["branch", "--delete", targetBranchName]);
     }
 }
 
