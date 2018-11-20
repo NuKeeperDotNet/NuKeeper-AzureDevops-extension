@@ -2,9 +2,9 @@
     "manifestVersion": 1,
     "id": "nukeeper",
     "name": "nukeeper",
-    "version": "0.1.29",
+    "version": "0.1.30",
     "publisher": "nukeeper",
-    "public": false,
+    "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
