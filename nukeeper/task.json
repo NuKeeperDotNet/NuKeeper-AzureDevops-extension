@@ -12,7 +12,7 @@
     "version": {
         "Major": 0,
         "Minor": 1,
-        "Patch": 18
+        "Patch": 22
     },
     "demands": [],
     "instanceNameFormat": "NuKeeper",
@@ -24,7 +24,15 @@
           "defaultValue": "",
           "required": false,
           "helpMarkDown": "Append extra configuration options"
-        }
+        },
+        {
+            "name": "command",
+            "type": "string",
+            "label": "Command",
+            "defaultValue": "repo",
+            "required": false,
+            "helpMarkDown": "the command to execute"
+          }
     ],
     "execution": {
         "Node": {
