@@ -18,6 +18,10 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
 
 async function run() {
    try {
+        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]); 
+        tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
+        tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
+
         tl.cd(tl.getVariable('Build.SourcesDirectory'));
 
         let token = tl.getEndpointAuthorizationParameter("SystemVssConnection", "AccessToken", false);

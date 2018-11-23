@@ -12,7 +12,7 @@
     "version": {
         "Major": 0,
         "Minor": 1,
-        "Patch": 38
+        "Patch": 40
     },
     "demands": [],
     "instanceNameFormat": "NuKeeper",
@@ -26,12 +26,6 @@
           "helpMarkDown": "Append extra configuration options"
         }
     ],
-    "prejobexecution": {
-        "Node": {
-            "target": "src/predeploymentjob.js",
-            "argumentFormat": ""
-        }
-    },
     "execution": {
         "Node": {
             "target": "src/NuKeeper.js",
