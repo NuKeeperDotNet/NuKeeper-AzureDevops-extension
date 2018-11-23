@@ -34,7 +34,7 @@
     },
     "execution": {
         "Node": {
-            "target": "src/task.js",
+            "target": "src/NuKeeper.js",
             "argumentFormat": ""
         }
     },
@@ -43,6 +43,5 @@
             "target": "src/postdeploymentjob.js",
             "argumentFormat": ""
         }
-    },
-    
+    }
 }
