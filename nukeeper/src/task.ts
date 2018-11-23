@@ -6,8 +6,6 @@ import * as tr from 'vsts-task-lib/toolrunner';
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
-        await ttl.extractZip(path.join(__dirname, '..', 'bin.zip'), path.resolve(__dirname, '..'));
-
         return new tr.ToolRunner(tl.which("dotnet"))
             .arg([path.join(__dirname, '..', 'bin', 'NuKeeper.dll')].concat(args))
             .line(tl.getInput("arguments"))
@@ -20,22 +18,16 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
 
 async function run() {
    try {
-        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]); 
-        tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
-        tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
+        tl.cd(tl.getVariable('Build.SourcesDirectory'));
 
-        tl.cd(tl.getVariable('Build.SourcesDirectory'))
-        
         let token = tl.getEndpointAuthorizationParameter("SystemVssConnection", "AccessToken", false);
-
-        await execNuKeeper([tl.getInput("command", true), tl.cwd(), token]);
-
+       
+        await execNuKeeper(['repo', tl.cwd(), token]);
+       
         tl.setResult(tl.TaskResult.Succeeded, "done");
     }
     catch (err) {
         tl.setResult(tl.TaskResult.Failed, err)
-    } finally {
-        tl.exec("git", ["checkout", "--progress", "--force", tl.getVariable('Build.SourceVersion')])
     }
 }
 

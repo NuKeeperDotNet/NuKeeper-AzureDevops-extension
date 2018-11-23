@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
     "id": "nukeeper",
-    "name": "nukeeper",
-    "version": "0.1.37",
+    "name": "NuKeeper",
+    "version": "0.1.38",
     "publisher": "nukeeper",
     "public": true,
     "targets": [
