@@ -4,10 +4,12 @@
 
 ### NuKeeper AzureDevops Extension
 
-This is the NuKeeper AzureDevops - VSTS extension. It will allow you to run the NuKeeper command inside the users build pipeline.
-It's up to the user to schedule the pipeline in whatever is correct for there solution. 
+This is the [NuKeeper](https://github.com/NuKeeperDotNet/NuKeeper) for [Azure DevOps](https://azure.microsoft.com/en-gb/services/devops/) / VSTS extension. It will allow you to run the NuKeeper command inside the users build pipeline.
 
+You will find it [here in the Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=nukeeper.nukeeper).
+
+It's up to the user to schedule the pipeline in whatever is correct for their solution.
 
 ### Acknowledgements
 
-Initial ground work done by [Manuel Riezebosch](https://github.com/riezebosch)
+Initial ground work done by [Manuel Riezebosch](https://github.com/riezebosch).
