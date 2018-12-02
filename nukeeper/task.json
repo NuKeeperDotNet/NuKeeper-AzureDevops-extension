@@ -12,7 +12,7 @@
     "version": {
         "Major": 0,
         "Minor": 1,
-        "Patch": 41
+        "Patch": 42
     },
     "demands": [],
     "instanceNameFormat": "NuKeeper",
@@ -21,8 +21,8 @@
           "name": "arguments",
           "type": "string",
           "label": "Arguments",
-          "defaultValue": "",
-          "required": false,
+          "defaultValue": "-p 3",
+          "required": true,
           "helpMarkDown": "Append extra configuration options"
         }
     ],

@@ -1,7 +1,6 @@
 
 import * as path from 'path';
 import * as tl from 'vsts-task-lib';
-import * as ttl from 'vsts-task-tool-lib';
 import * as tr from 'vsts-task-lib/toolrunner';
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
@@ -10,7 +9,6 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
             .arg([path.join(__dirname, '..', 'bin', 'NuKeeper.dll')].concat(args))
             .line(tl.getInput("arguments"))
             .exec();
-
     } catch (err){
         throw err;
     }
