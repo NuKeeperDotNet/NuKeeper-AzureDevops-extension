@@ -10,6 +10,24 @@ You will find it [here in the Visual Studio marketplace](https://marketplace.vis
 
 It's up to the user to schedule the pipeline in whatever is correct for their solution.
 
+
+### Installation
+
+Once installed you still have to give the extension access rights:
+
+- Go to "Project settings" in your ADO home screen.
+- Click repositories
+- Click Git repositories
+- Click the build service User(the bottom one, something like: Project collection build service)
+
+Give it the following rights:
+- Contribute	Allow
+- Contribute to pull requests	Allow
+- Create branch	Allow
+- Create repository Allow
+
+That should do it.
+
 ### Acknowledgements
 
 Initial ground work done by [Manuel Riezebosch](https://github.com/riezebosch).
