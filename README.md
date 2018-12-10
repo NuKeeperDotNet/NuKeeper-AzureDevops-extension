@@ -27,7 +27,3 @@ Give it the following rights:
 - Create repository Allow
 
 That should do it.
-
-### Acknowledgements
-
-Initial ground work done by [Manuel Riezebosch](https://github.com/riezebosch).
