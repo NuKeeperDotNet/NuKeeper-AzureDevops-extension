@@ -16,7 +16,8 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
 
 async function run() {
    try {
-        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]); 
+        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
+        tl.exec("git", ["pull"]);
         tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
         tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
 
