@@ -15,7 +15,7 @@ It's up to the user to schedule the pipeline in whatever is correct for their so
 
 Once installed you still have to give the extension access rights:
 
-- Go to "Project settings" in your ADO home screen.
+- Go to "Project settings" in your AzureDevops home screen.
 - Click repositories
 - Click Git repositories
 - Click the build service User(the bottom one, something like: Project collection build service)
