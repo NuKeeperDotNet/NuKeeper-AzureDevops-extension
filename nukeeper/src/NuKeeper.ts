@@ -5,8 +5,10 @@ import * as tr from 'vsts-task-lib/toolrunner';
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
-        return new tr.ToolRunner(tl.which("dotnet"))
-            .arg([path.join(__dirname, '..', 'bin', 'NuKeeper.dll')].concat(args))
+        tl.exec("SET", ["pwd=%cd%"]);
+
+        return new tr.ToolRunner(tl.which("docker"))
+            .arg(["run", "-v", "%cd%/mount", "nukeeper/nukeeper:0.13.0", "repo", "mount", args[2]])
             .line(tl.getInput("arguments"))
             .exec();
     } catch (err){
