@@ -6,17 +6,17 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "NuKeeper/0.10.1": {
+      "NuKeeper/0.10.0": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "NuGet.CommandLine": "4.7.1",
-          "NuKeeper.Abstractions": "0.10.1",
-          "NuKeeper.AzureDevOps": "0.10.1",
-          "NuKeeper.BitBucket": "0.10.1",
-          "NuKeeper.Git": "0.10.1",
-          "NuKeeper.GitHub": "0.10.1",
-          "NuKeeper.Inspection": "0.10.1",
-          "NuKeeper.Update": "0.10.1",
+          "NuKeeper.Abstractions": "0.10.0",
+          "NuKeeper.AzureDevOps": "0.10.0",
+          "NuKeeper.BitBucket": "0.10.0",
+          "NuKeeper.Git": "0.10.0",
+          "NuKeeper.GitHub": "0.10.0",
+          "NuKeeper.Inspection": "0.10.0",
+          "NuKeeper.Update": "0.10.0",
           "SimpleInjector": "4.4.0"
         },
         "runtime": {
@@ -543,7 +543,7 @@
           "System.Runtime.Handles": "4.3.0"
         }
       },
-      "NuKeeper.Abstractions/0.10.1": {
+      "NuKeeper.Abstractions/0.10.0": {
         "dependencies": {
           "McMaster.Extensions.CommandLineUtils": "2.2.5",
           "NuGet.Protocol": "4.8.0"
@@ -552,53 +552,53 @@
           "NuKeeper.Abstractions.dll": {}
         }
       },
-      "NuKeeper.AzureDevOps/0.10.1": {
+      "NuKeeper.AzureDevOps/0.10.0": {
         "dependencies": {
-          "NuKeeper.Abstractions": "0.10.1"
+          "NuKeeper.Abstractions": "0.10.0"
         },
         "runtime": {
           "NuKeeper.AzureDevOps.dll": {}
         }
       },
-      "NuKeeper.BitBucket/0.10.1": {
+      "NuKeeper.BitBucket/0.10.0": {
         "dependencies": {
-          "NuKeeper.Abstractions": "0.10.1"
+          "NuKeeper.Abstractions": "0.10.0"
         },
         "runtime": {
           "NuKeeper.BitBucket.dll": {}
         }
       },
-      "NuKeeper.Git/0.10.1": {
+      "NuKeeper.Git/0.10.0": {
         "dependencies": {
           "LibGit2Sharp": "0.26.0-preview-0062",
-          "NuKeeper.Abstractions": "0.10.1"
+          "NuKeeper.Abstractions": "0.10.0"
         },
         "runtime": {
           "NuKeeper.Git.dll": {}
         }
       },
-      "NuKeeper.GitHub/0.10.1": {
+      "NuKeeper.GitHub/0.10.0": {
         "dependencies": {
-          "NuKeeper.Abstractions": "0.10.1",
+          "NuKeeper.Abstractions": "0.10.0",
           "Octokit": "0.32.0"
         },
         "runtime": {
           "NuKeeper.GitHub.dll": {}
         }
       },
-      "NuKeeper.Inspection/0.10.1": {
+      "NuKeeper.Inspection/0.10.0": {
         "dependencies": {
           "NuGet.Protocol": "4.8.0",
-          "NuKeeper.Abstractions": "0.10.1",
+          "NuKeeper.Abstractions": "0.10.0",
           "System.Text.Encoding.CodePages": "4.5.0"
         },
         "runtime": {
           "NuKeeper.Inspection.dll": {}
         }
       },
-      "NuKeeper.Update/0.10.1": {
+      "NuKeeper.Update/0.10.0": {
         "dependencies": {
-          "NuKeeper.Inspection": "0.10.1"
+          "NuKeeper.Inspection": "0.10.0"
         },
         "runtime": {
           "NuKeeper.Update.dll": {}
@@ -607,7 +607,7 @@
     }
   },
   "libraries": {
-    "NuKeeper/0.10.1": {
+    "NuKeeper/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -976,37 +976,37 @@
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
     },
-    "NuKeeper.Abstractions/0.10.1": {
+    "NuKeeper.Abstractions/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.AzureDevOps/0.10.1": {
+    "NuKeeper.AzureDevOps/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.BitBucket/0.10.1": {
+    "NuKeeper.BitBucket/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.Git/0.10.1": {
+    "NuKeeper.Git/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.GitHub/0.10.1": {
+    "NuKeeper.GitHub/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.Inspection/0.10.1": {
+    "NuKeeper.Inspection/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.Update/0.10.1": {
+    "NuKeeper.Update/0.10.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

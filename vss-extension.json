@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "nukeeper",
     "name": "NuKeeper",
-    "version": "0.1.42",
+    "version": "0.1.54",
     "publisher": "nukeeper",
     "public": true,
     "targets": [
@@ -10,7 +10,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "Automagically update nuget packages in .NET projects",
+    "description": "Automagically update nuget packages in .NET projects.",
     "categories": [
         "Azure Pipelines"
     ],

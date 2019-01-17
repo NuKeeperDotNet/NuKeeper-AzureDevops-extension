@@ -1,4 +1,3 @@
-
 import * as path from 'path';
 import * as tl from 'vsts-task-lib';
 import * as tr from 'vsts-task-lib/toolrunner';
