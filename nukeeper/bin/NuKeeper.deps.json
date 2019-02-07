@@ -1,116 +1,135 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "ae16b4218710c3ca3ac9638b2b06de47eae168dd"
+    "signature": "7af3bd67349dd22cd42f6f14d7273b4c459d0b74"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "NuKeeper/0.10.0": {
+      "NuKeeper/0.10.1.1": {
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
-          "NuGet.CommandLine": "4.7.1",
-          "NuKeeper.Abstractions": "0.10.0",
-          "NuKeeper.AzureDevOps": "0.10.0",
-          "NuKeeper.BitBucket": "0.10.0",
-          "NuKeeper.Git": "0.10.0",
-          "NuKeeper.GitHub": "0.10.0",
-          "NuKeeper.Inspection": "0.10.0",
-          "NuKeeper.Update": "0.10.0",
-          "SimpleInjector": "4.4.0"
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.6.2",
+          "Microsoft.CodeQuality.Analyzers": "2.6.2",
+          "Microsoft.NetCore.Analyzers": "2.6.2",
+          "Newtonsoft.Json": "12.0.1",
+          "NuGet.CommandLine": "4.9.2",
+          "NuKeeper.Abstractions": "0.10.1.1",
+          "NuKeeper.AzureDevOps": "0.10.1.1",
+          "NuKeeper.BitBucket": "0.10.1.1",
+          "NuKeeper.BitBucketLocal": "0.10.1.1",
+          "NuKeeper.Git": "0.10.1.1",
+          "NuKeeper.GitHub": "0.10.1.1",
+          "NuKeeper.Inspection": "0.10.1.1",
+          "NuKeeper.Update": "0.10.1.1",
+          "SimpleInjector": "4.4.3",
+          "Text.Analyzers": "2.6.2"
         },
         "runtime": {
           "NuKeeper.dll": {}
         }
       },
-      "LibGit2Sharp/0.26.0-preview-0062": {
+      "LibGit2Sharp/0.26.0-preview-0080": {
         "dependencies": {
-          "LibGit2Sharp.NativeBinaries": "1.0.245"
+          "LibGit2Sharp.NativeBinaries": "1.0.260"
         },
         "runtime": {
           "lib/netstandard2.0/LibGit2Sharp.dll": {
             "assemblyVersion": "0.26.0.0",
-            "fileVersion": "0.26.0.62"
+            "fileVersion": "0.26.0.80"
           }
         }
       },
-      "LibGit2Sharp.NativeBinaries/1.0.245": {
+      "LibGit2Sharp.NativeBinaries/1.0.260": {
         "runtimeTargets": {
-          "runtimes/alpine-x64/native/libgit2-8e0b172.so": {
+          "runtimes/alpine-x64/native/libgit2-a904fc6.so": {
             "rid": "alpine-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/debian.9-x64/native/libgit2-8e0b172.so": {
+          "runtimes/debian.9-x64/native/libgit2-a904fc6.so": {
             "rid": "debian.9-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/fedora-x64/native/libgit2-8e0b172.so": {
+          "runtimes/fedora-x64/native/libgit2-a904fc6.so": {
             "rid": "fedora-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/linux-x64/native/libgit2-8e0b172.so": {
+          "runtimes/linux-x64/native/libgit2-a904fc6.so": {
             "rid": "linux-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/osx/native/libgit2-8e0b172.dylib": {
+          "runtimes/osx/native/libgit2-a904fc6.dylib": {
             "rid": "osx",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/rhel-x64/native/libgit2-8e0b172.so": {
+          "runtimes/rhel-x64/native/libgit2-a904fc6.so": {
             "rid": "rhel-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/ubuntu.18.04-x64/native/libgit2-8e0b172.so": {
+          "runtimes/ubuntu.18.04-x64/native/libgit2-a904fc6.so": {
             "rid": "ubuntu.18.04-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/win-x64/native/git2-8e0b172.dll": {
+          "runtimes/win-x64/native/git2-a904fc6.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.27.5.0"
+            "fileVersion": "0.27.0.0"
           },
-          "runtimes/win-x64/native/git2-8e0b172.pdb": {
+          "runtimes/win-x64/native/git2-a904fc6.pdb": {
             "rid": "win-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           },
-          "runtimes/win-x86/native/git2-8e0b172.dll": {
+          "runtimes/win-x86/native/git2-a904fc6.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "0.27.5.0"
+            "fileVersion": "0.27.0.0"
           },
-          "runtimes/win-x86/native/git2-8e0b172.pdb": {
+          "runtimes/win-x86/native/git2-a904fc6.pdb": {
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           }
         }
       },
-      "McMaster.Extensions.CommandLineUtils/2.2.5": {
+      "McMaster.Extensions.CommandLineUtils/2.3.1": {
         "dependencies": {
           "System.ComponentModel.Annotations": "4.4.1"
         },
         "runtime": {
           "lib/netstandard2.0/McMaster.Extensions.CommandLineUtils.dll": {
-            "assemblyVersion": "2.2.5.0",
-            "fileVersion": "2.2.5.317"
+            "assemblyVersion": "2.3.1.0",
+            "fileVersion": "2.3.1.0"
           }
         }
       },
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.2": {
+        "dependencies": {
+          "Microsoft.CodeQuality.Analyzers": "2.6.2",
+          "Microsoft.NetCore.Analyzers": "2.6.2",
+          "Microsoft.NetFramework.Analyzers": "2.6.2",
+          "Text.Analyzers": "2.6.2"
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.6.2": {},
+      "Microsoft.NetCore.Analyzers/2.6.2": {},
+      "Microsoft.NETCore.Platforms/2.1.2": {},
+      "Microsoft.NetFramework.Analyzers/2.6.2": {},
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
       "Microsoft.Win32.Registry/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Collections": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
@@ -130,91 +149,92 @@
           }
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
           }
         }
       },
-      "NuGet.CommandLine/4.7.1": {},
-      "NuGet.Common/4.8.0": {
+      "NuGet.CommandLine/4.9.2": {},
+      "NuGet.Common/4.9.2": {
         "dependencies": {
-          "NuGet.Frameworks": "4.8.0",
+          "NuGet.Frameworks": "4.9.2",
           "System.Diagnostics.Process": "4.3.0",
           "System.Threading.Thread": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Common.dll": {
-            "assemblyVersion": "4.8.0.6",
-            "fileVersion": "4.8.0.5385"
+            "assemblyVersion": "4.9.2.0",
+            "fileVersion": "4.9.2.5706"
           }
         }
       },
-      "NuGet.Configuration/4.8.0": {
+      "NuGet.Configuration/4.9.2": {
         "dependencies": {
-          "NuGet.Common": "4.8.0",
+          "NuGet.Common": "4.9.2",
           "System.Security.Cryptography.ProtectedData": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Configuration.dll": {
-            "assemblyVersion": "4.8.0.6",
-            "fileVersion": "4.8.0.5385"
+            "assemblyVersion": "4.9.2.0",
+            "fileVersion": "4.9.2.5706"
           }
         }
       },
-      "NuGet.Frameworks/4.8.0": {
+      "NuGet.Frameworks/4.9.2": {
         "runtime": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {
-            "assemblyVersion": "4.8.0.6",
-            "fileVersion": "4.8.0.5385"
+            "assemblyVersion": "4.9.2.0",
+            "fileVersion": "4.9.2.5706"
           }
         }
       },
-      "NuGet.Packaging/4.8.0": {
+      "NuGet.Packaging/4.9.2": {
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
-          "NuGet.Packaging.Core": "4.8.0",
+          "Newtonsoft.Json": "12.0.1",
+          "NuGet.Configuration": "4.9.2",
+          "NuGet.Packaging.Core": "4.9.2",
           "System.Dynamic.Runtime": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Packaging.dll": {
-            "assemblyVersion": "4.8.0.6",
-            "fileVersion": "4.8.0.5385"
+            "assemblyVersion": "4.9.2.0",
+            "fileVersion": "4.9.2.5706"
           }
         }
       },
-      "NuGet.Packaging.Core/4.8.0": {
+      "NuGet.Packaging.Core/4.9.2": {
         "dependencies": {
-          "NuGet.Common": "4.8.0",
-          "NuGet.Versioning": "4.8.0"
+          "NuGet.Common": "4.9.2",
+          "NuGet.Versioning": "4.9.2"
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Packaging.Core.dll": {
-            "assemblyVersion": "4.8.0.6",
-            "fileVersion": "4.8.0.5385"
+            "assemblyVersion": "4.9.2.0",
+            "fileVersion": "4.9.2.5706"
           }
         }
       },
-      "NuGet.Protocol/4.8.0": {
+      "NuGet.Protocol/4.9.2": {
         "dependencies": {
-          "NuGet.Configuration": "4.8.0",
-          "NuGet.Packaging": "4.8.0",
+          "NuGet.Configuration": "4.9.2",
+          "NuGet.Packaging": "4.9.2",
           "System.Dynamic.Runtime": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Protocol.dll": {
-            "assemblyVersion": "4.8.0.6",
-            "fileVersion": "4.8.0.5385"
+            "assemblyVersion": "4.9.2.0",
+            "fileVersion": "4.9.2.5706"
           }
         }
       },
-      "NuGet.Versioning/4.8.0": {
+      "NuGet.Versioning/4.9.2": {
         "runtime": {
           "lib/netstandard1.6/NuGet.Versioning.dll": {
-            "assemblyVersion": "4.8.0.6",
-            "fileVersion": "4.8.0.5385"
+            "assemblyVersion": "4.9.2.0",
+            "fileVersion": "4.9.2.5706"
           }
         }
       },
@@ -226,20 +246,25 @@
           }
         }
       },
-      "runtime.native.System/4.3.0": {},
-      "SimpleInjector/4.4.0": {
+      "runtime.native.System/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2"
+        }
+      },
+      "SimpleInjector/4.4.3": {
         "dependencies": {
           "System.ComponentModel": "4.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/SimpleInjector.dll": {
-            "assemblyVersion": "4.4.0.0",
-            "fileVersion": "4.4.0.0"
+            "assemblyVersion": "4.4.3.0",
+            "fileVersion": "4.4.3.0"
           }
         }
       },
       "System.Collections/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
@@ -251,11 +276,13 @@
       "System.ComponentModel.Annotations/4.4.1": {},
       "System.Diagnostics.Debug/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Diagnostics.Process/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.Win32.Primitives": "4.3.0",
           "Microsoft.Win32.Registry": "4.3.0",
           "System.Collections": "4.3.0",
@@ -312,11 +339,13 @@
       },
       "System.Globalization/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
       "System.IO/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
@@ -324,6 +353,7 @@
       },
       "System.IO.FileSystem/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.IO": "4.3.0",
           "System.IO.FileSystem.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -378,6 +408,7 @@
       },
       "System.Reflection/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.IO": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -409,12 +440,14 @@
       },
       "System.Reflection.Extensions/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
@@ -426,32 +459,40 @@
       },
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Globalization": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Runtime/4.3.0": {},
-      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "assemblyVersion": "4.0.4.0",
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.26919.2"
           }
         }
       },
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.Handles/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.InteropServices/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Reflection": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -471,6 +512,7 @@
       },
       "System.Security.Cryptography.ProtectedData/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
@@ -493,17 +535,19 @@
       },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Text.Encoding.CodePages/4.5.0": {
+      "System.Text.Encoding.CodePages/4.5.1": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
             "assemblyVersion": "4.1.1.0",
-            "fileVersion": "4.6.26515.6"
+            "fileVersion": "4.6.27129.4"
           }
         },
         "runtimeTargets": {
@@ -511,12 +555,13 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "4.1.1.0",
-            "fileVersion": "4.6.26515.6"
+            "fileVersion": "4.6.27129.4"
           }
         }
       },
       "System.Text.Encoding.Extensions/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0"
         }
@@ -529,6 +574,7 @@
       },
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Runtime": "4.3.0"
         }
       },
@@ -543,62 +589,71 @@
           "System.Runtime.Handles": "4.3.0"
         }
       },
-      "NuKeeper.Abstractions/0.10.0": {
+      "Text.Analyzers/2.6.2": {},
+      "NuKeeper.Abstractions/0.10.1.1": {
         "dependencies": {
-          "McMaster.Extensions.CommandLineUtils": "2.2.5",
-          "NuGet.Protocol": "4.8.0"
+          "McMaster.Extensions.CommandLineUtils": "2.3.1",
+          "NuGet.Protocol": "4.9.2"
         },
         "runtime": {
           "NuKeeper.Abstractions.dll": {}
         }
       },
-      "NuKeeper.AzureDevOps/0.10.0": {
+      "NuKeeper.AzureDevOps/0.10.1.1": {
         "dependencies": {
-          "NuKeeper.Abstractions": "0.10.0"
+          "NuKeeper.Abstractions": "0.10.1.1"
         },
         "runtime": {
           "NuKeeper.AzureDevOps.dll": {}
         }
       },
-      "NuKeeper.BitBucket/0.10.0": {
+      "NuKeeper.BitBucket/0.10.1.1": {
         "dependencies": {
-          "NuKeeper.Abstractions": "0.10.0"
+          "NuKeeper.Abstractions": "0.10.1.1"
         },
         "runtime": {
           "NuKeeper.BitBucket.dll": {}
         }
       },
-      "NuKeeper.Git/0.10.0": {
+      "NuKeeper.BitBucketLocal/0.10.1.1": {
         "dependencies": {
-          "LibGit2Sharp": "0.26.0-preview-0062",
-          "NuKeeper.Abstractions": "0.10.0"
+          "NuKeeper.Abstractions": "0.10.1.1"
+        },
+        "runtime": {
+          "NuKeeper.BitBucketLocal.dll": {}
+        }
+      },
+      "NuKeeper.Git/0.10.1.1": {
+        "dependencies": {
+          "LibGit2Sharp": "0.26.0-preview-0080",
+          "NuKeeper.Abstractions": "0.10.1.1"
         },
         "runtime": {
           "NuKeeper.Git.dll": {}
         }
       },
-      "NuKeeper.GitHub/0.10.0": {
+      "NuKeeper.GitHub/0.10.1.1": {
         "dependencies": {
-          "NuKeeper.Abstractions": "0.10.0",
+          "NuKeeper.Abstractions": "0.10.1.1",
           "Octokit": "0.32.0"
         },
         "runtime": {
           "NuKeeper.GitHub.dll": {}
         }
       },
-      "NuKeeper.Inspection/0.10.0": {
+      "NuKeeper.Inspection/0.10.1.1": {
         "dependencies": {
-          "NuGet.Protocol": "4.8.0",
-          "NuKeeper.Abstractions": "0.10.0",
-          "System.Text.Encoding.CodePages": "4.5.0"
+          "NuGet.Protocol": "4.9.2",
+          "NuKeeper.Abstractions": "0.10.1.1",
+          "System.Text.Encoding.CodePages": "4.5.1"
         },
         "runtime": {
           "NuKeeper.Inspection.dll": {}
         }
       },
-      "NuKeeper.Update/0.10.0": {
+      "NuKeeper.Update/0.10.1.1": {
         "dependencies": {
-          "NuKeeper.Inspection": "0.10.0"
+          "NuKeeper.Inspection": "0.10.1.1"
         },
         "runtime": {
           "NuKeeper.Update.dll": {}
@@ -607,31 +662,66 @@
     }
   },
   "libraries": {
-    "NuKeeper/0.10.0": {
+    "NuKeeper/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "LibGit2Sharp/0.26.0-preview-0062": {
+    "LibGit2Sharp/0.26.0-preview-0080": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-icJnAXa48EtTdWRjaY76+RMlYm1uzzpaYdxk4WdEy5PvgK6TCEfAU90vXt4gIFwVV1nW8ZaZysCO8ShckJf58A==",
-      "path": "libgit2sharp/0.26.0-preview-0062",
-      "hashPath": "libgit2sharp.0.26.0-preview-0062.nupkg.sha512"
+      "sha512": "sha512-ukjs5rCLh1G3wei7UeJj7rQUpsZ9SM6aSlRdwqOYITQPo8o4iCVpVaTQajCk70Ke2F86bEKo+0sr0U75ImHs1w==",
+      "path": "libgit2sharp/0.26.0-preview-0080",
+      "hashPath": "libgit2sharp.0.26.0-preview-0080.nupkg.sha512"
     },
-    "LibGit2Sharp.NativeBinaries/1.0.245": {
+    "LibGit2Sharp.NativeBinaries/1.0.260": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iTB6m5mCa31Lau43QpjkT2Grpry2D6B2J/BXo0hz3OOT7RrqfY2wv1hJm8jus82TjEvSbJrzZQGN7iBL0VkxXg==",
-      "path": "libgit2sharp.nativebinaries/1.0.245",
-      "hashPath": "libgit2sharp.nativebinaries.1.0.245.nupkg.sha512"
+      "sha512": "sha512-6tZBt3N2VNBNtorKRYFqzsizpeXngKWb87BkPBTZxRmRQ88ObrDYIAFhbCuXqxmHfFF9LTw3297vFmV05Dbkmw==",
+      "path": "libgit2sharp.nativebinaries/1.0.260",
+      "hashPath": "libgit2sharp.nativebinaries.1.0.260.nupkg.sha512"
     },
-    "McMaster.Extensions.CommandLineUtils/2.2.5": {
+    "McMaster.Extensions.CommandLineUtils/2.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Zbdiiu616SDIlBGeBZj2U1UZU/mdlT5szgfw+P+DUS8qX9ebMQIOq8vQzxPgNSDsvNqlHIAMeP74d2PTg/O5dw==",
-      "path": "mcmaster.extensions.commandlineutils/2.2.5",
-      "hashPath": "mcmaster.extensions.commandlineutils.2.2.5.nupkg.sha512"
+      "sha512": "sha512-XOkveS9OOoOTqq+am1CRFa7A7sEGtH1RC/Bhf3TFKvxORFHzbTfIuqgdIX0kcUkrSuPpiS4EPi758TU+0OxyDg==",
+      "path": "mcmaster.extensions.commandlineutils/2.3.1",
+      "hashPath": "mcmaster.extensions.commandlineutils.2.3.1.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fub9nWKI08wCmC9hnARCCYDLEd+aAs/aqhAQ27BmaP2fq3Jh8WSgNFLNInic+9lXQmibU6r7SSKbMroh3aM3ig==",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.6.2",
+      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.6.2.nupkg.sha512"
+    },
+    "Microsoft.CodeQuality.Analyzers/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HEH7nPissPcvMhx0MOXXaARkmzkEP7hDFBz3o06ZDj3rpE+F0e5hVoGJDr+qPsbJaeDoAlbArzTYfGsbZPSlPA==",
+      "path": "microsoft.codequality.analyzers/2.6.2",
+      "hashPath": "microsoft.codequality.analyzers.2.6.2.nupkg.sha512"
+    },
+    "Microsoft.NetCore.Analyzers/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HUfJMvzy4xJ6b4X99NGer2Pxn5On/WU/JscTzxKODg9srhJdtlWNhdorbejl2igrBi7RX6ufBhfvp8aBAEMy1A==",
+      "path": "microsoft.netcore.analyzers/2.6.2",
+      "hashPath": "microsoft.netcore.analyzers.2.6.2.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3aEMpU6VFYD792seIxRDxf5ucnH/HR6hLL1AeZROIc/rJpsw1Ctp2YoCXQDAz7CU20AU/W6w+OmuGFu/eyM6Vw==",
+      "path": "microsoft.netcore.platforms/2.1.2",
+      "hashPath": "microsoft.netcore.platforms.2.1.2.nupkg.sha512"
+    },
+    "Microsoft.NetFramework.Analyzers/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HdNe8zptYp3bl7VDPTXDzeKMqkQva8m9mUI0C1HFN2iiMsMGnV3gqOeDQenH6NCTgSwYRnokHFsvcOeEODMd0g==",
+      "path": "microsoft.netframework.analyzers/2.6.2",
+      "hashPath": "microsoft.netframework.analyzers.2.6.2.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -647,68 +737,68 @@
       "path": "microsoft.win32.registry/4.3.0",
       "hashPath": "microsoft.win32.registry.4.3.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/11.0.2": {
+    "Newtonsoft.Json/12.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
-      "path": "newtonsoft.json/11.0.2",
-      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+      "sha512": "sha512-jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
     },
-    "NuGet.CommandLine/4.7.1": {
+    "NuGet.CommandLine/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cBOuMAfOdB87PkOXWgf3F0pMdvcf6i5eeb8VsSI/Ub58D0Be/9SoqEX+KwHdfsKhKEyD9UJ+2ih5FybhAhzcYw==",
-      "path": "nuget.commandline/4.7.1",
-      "hashPath": "nuget.commandline.4.7.1.nupkg.sha512"
+      "sha512": "sha512-wU/bd71dgASkHU3KbNDC44OlZ8FrYp5e87KEbwtjqR3fPEI2UTw7pUpVFSt4CUdYfaBY8PLzky+8yAlKAYR/KA==",
+      "path": "nuget.commandline/4.9.2",
+      "hashPath": "nuget.commandline.4.9.2.nupkg.sha512"
     },
-    "NuGet.Common/4.8.0": {
+    "NuGet.Common/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YAyADiHyb3bTXyBO/mixQcKj0iCkZhL84g4JO92Fo13HlupjAIazMUek9nMoeR6yCaBBSRJs+GiK2CdFjUCa0w==",
-      "path": "nuget.common/4.8.0",
-      "hashPath": "nuget.common.4.8.0.nupkg.sha512"
+      "sha512": "sha512-rlsTOcu3lFoUcnMMBlxVty9GFoXzQIpObyIBlwkfpAIadlT1VbueWuuDTRZ07QFCl8c3lK75CuQyUPNpxZ0Otg==",
+      "path": "nuget.common/4.9.2",
+      "hashPath": "nuget.common.4.9.2.nupkg.sha512"
     },
-    "NuGet.Configuration/4.8.0": {
+    "NuGet.Configuration/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5UK3RHECzhfu2ah9WSB0/OpHfhf9ig2+lVRitY9Dndt5sZjaw6F8AsrfxLfn/OHza28GSHWYrTLepD+KcmGmdw==",
-      "path": "nuget.configuration/4.8.0",
-      "hashPath": "nuget.configuration.4.8.0.nupkg.sha512"
+      "sha512": "sha512-ZD7GkM5HQ4OlInuyWXt32aYleMuAixQQMYn6rycDMnkctaMGBz4EKcIlu/LOXRpbQl/lmrcal8CoKUSj/7UdrQ==",
+      "path": "nuget.configuration/4.9.2",
+      "hashPath": "nuget.configuration.4.9.2.nupkg.sha512"
     },
-    "NuGet.Frameworks/4.8.0": {
+    "NuGet.Frameworks/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-apYEGPBrGN2u34doW7CegZOiPRtkFvSfmjvZliv7D73CPMT+wltThPLD2YrwN/xpbNfDGCTEPmlEhZbPV/Gp1A==",
-      "path": "nuget.frameworks/4.8.0",
-      "hashPath": "nuget.frameworks.4.8.0.nupkg.sha512"
+      "sha512": "sha512-OfDuuzkFdoQLajD8vOUrUiuz/GmIUG9Q0jUBZjLc9xjz8AFhh6eEQAtbOzgflD9dvQSVyklYGy4fmCpCF7CaRQ==",
+      "path": "nuget.frameworks/4.9.2",
+      "hashPath": "nuget.frameworks.4.9.2.nupkg.sha512"
     },
-    "NuGet.Packaging/4.8.0": {
+    "NuGet.Packaging/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-56YktjY9zFQPrzDslLCzu5t2wrlxEFZS75TOw+3PAniM/pkfYlUacPJkrRMIh9J+lFJ1nszXYS44xynsK0ffvA==",
-      "path": "nuget.packaging/4.8.0",
-      "hashPath": "nuget.packaging.4.8.0.nupkg.sha512"
+      "sha512": "sha512-DBj/o67T858pWDoxbkZlqaYzL87WEi8h3LA63ql0hvlT/TcSEx4mDGog2CByLXxJtu49ezd670W5ERFT8gCaOw==",
+      "path": "nuget.packaging/4.9.2",
+      "hashPath": "nuget.packaging.4.9.2.nupkg.sha512"
     },
-    "NuGet.Packaging.Core/4.8.0": {
+    "NuGet.Packaging.Core/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-p76mkTxcIvlQ+TlPUAJBTauDUUG/A4XbO7Ttctrlt696VlweS3vjAL84VEE6t28NcEZGGTxHqv8CgYnWblbD8w==",
-      "path": "nuget.packaging.core/4.8.0",
-      "hashPath": "nuget.packaging.core.4.8.0.nupkg.sha512"
+      "sha512": "sha512-sCOWysDhaNnvSSxwS+KmaN5XA3IuTNGKSo3AxIPlXZzf9r2Jj9bvAWWWd/Nkc9q1E7j+7gQI3+QGpfuuDmFiEw==",
+      "path": "nuget.packaging.core/4.9.2",
+      "hashPath": "nuget.packaging.core.4.9.2.nupkg.sha512"
     },
-    "NuGet.Protocol/4.8.0": {
+    "NuGet.Protocol/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6m+VefELesz+2r1jaXMWWWlgPGjWfMzxxii5hDNdIZ2LGefrdQrX/Q4q9IiAttuvEsWzLOigrR/0gdFVrEwQng==",
-      "path": "nuget.protocol/4.8.0",
-      "hashPath": "nuget.protocol.4.8.0.nupkg.sha512"
+      "sha512": "sha512-h/5aBb/4tnEyx4ZfqD7QU5tSZBwPEytBRMuh1HAfouBQ61doXowUrP5upbpNKKHM06/eJcYW+nUKPuqueQUhuw==",
+      "path": "nuget.protocol/4.9.2",
+      "hashPath": "nuget.protocol.4.9.2.nupkg.sha512"
     },
-    "NuGet.Versioning/4.8.0": {
+    "NuGet.Versioning/4.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Owdln10EmhiRzmq4ng8H3XfMusfT5Sk/kisOtzfoGFBd3OHshhOiJiIkXbPwGddSCmIC8qZKrceog4xUDCJKCg==",
-      "path": "nuget.versioning/4.8.0",
-      "hashPath": "nuget.versioning.4.8.0.nupkg.sha512"
+      "sha512": "sha512-fB7/lCu5jzUu7+Mh+PCv9Nh2RRcLPqvLb+WKAWiNFRfbVPbY6/cV2d3zLPz2eEVJfy1bMbJLV88Un5vMtsakYA==",
+      "path": "nuget.versioning/4.9.2",
+      "hashPath": "nuget.versioning.4.9.2.nupkg.sha512"
     },
     "Octokit/0.32.0": {
       "type": "package",
@@ -720,16 +810,16 @@
     "runtime.native.System/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
+      "sha512": "sha512-WhJvyrFtATtVe0gVOIQBFL7vKIUY7u89y5c17Y1CcW8t/8GuE8mhXxXug1zUvkXYl2WYGH1/ryCGst1GYPT2Sw==",
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
-    "SimpleInjector/4.4.0": {
+    "SimpleInjector/4.4.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-o/nsIeZyJH0WgByrFJhQhlPnJaxt+ujte1TrwaKQDnrwHZ3o9O9wV5hzYjL8/VOXD+y+ZV4lS1T/c1VMLMHirQ==",
-      "path": "simpleinjector/4.4.0",
-      "hashPath": "simpleinjector.4.4.0.nupkg.sha512"
+      "sha512": "sha512-Ga3JUEpqHZjrPSUF3Jh7WsGXNduDmtFP7HVaRwzZYk5IB8dpblhYbxAcSM8+mPXmCfhnpOSuuhDIpKg2nwneNg==",
+      "path": "simpleinjector/4.4.3",
+      "hashPath": "simpleinjector.4.4.3.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -762,14 +852,14 @@
     "System.Diagnostics.Process/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-J0wOX07+QASQblsfxmIMFc9Iq7KTXYL3zs2G/Xc704Ylv3NpuVdo6gij6V3PGiptTxqsK0K7CdXenRvKUnkA2g==",
+      "sha512": "sha512-XsLGE8nNAWknGyNWOjCiJKdwXLqd5Vcbar7SHfV7Q9kXDZN7QQeixL/4SBFBt4ecpWidmluau7w/ILzGp/HwSw==",
       "path": "system.diagnostics.process/4.3.0",
       "hashPath": "system.diagnostics.process.4.3.0.nupkg.sha512"
     },
     "System.Dynamic.Runtime/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SNVi1E/vfWUAs/WYKhE9+qlS6KqK0YVhnlT0HQtr8pMIA8YX3lwy3uPMownDwdYISBdmAF/2holEIldVp85Wag==",
+      "sha512": "sha512-C3mrLecgJZaXWwGQa/ZdiclNij7H/l7y3aHnO6LksS9zE7nsSqtXgPCYpgHgVlTo6IABY6RqLqAjCsh+eqIjGw==",
       "path": "system.dynamic.runtime/4.3.0",
       "hashPath": "system.dynamic.runtime.4.3.0.nupkg.sha512"
     },
@@ -832,21 +922,21 @@
     "System.Reflection.Emit/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
+      "sha512": "sha512-xkQWxwjnTqh0xWTOJCi23ksxt03sUc6MzPhiI72wzrE1g1fbuKj9QxenOjrbAe5oz8cBQ78BDt0EwJ3mpyNNag==",
       "path": "system.reflection.emit/4.3.0",
       "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
+      "sha512": "sha512-KIRXTzyS9mJh5Ru2IDzYW8dyEIUDKfCT87CeU9oh2EfGcEUCN/B1+VtceSd+4qzgqzqGxu8sd/RK77pAW8NyvA==",
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
     },
     "System.Reflection.Emit.Lightweight/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
+      "sha512": "sha512-jIiuhTSVw/a3LJcmgRZMEMP2gK6gm3Bk4cazBqzcyVSk9kBW9FR4Y8oDIP8zSjJDrpAdcypNBTFQfwSKa7eSuQ==",
       "path": "system.reflection.emit.lightweight/4.3.0",
       "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
     },
@@ -867,7 +957,7 @@
     "System.Reflection.TypeExtensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
+      "sha512": "sha512-cZK0+AOP7S8+zJLBS18yP+vQMekQIT6YXl8vJXmjdUER1Rcw3u3MGEYgcDLZWtlRtP4ccta7S9UvC6sBEJAoZQ==",
       "path": "system.reflection.typeextensions/4.3.0",
       "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
@@ -885,12 +975,12 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6zBxkHYemB0kQiHP3vGXGRXejZVoNVuMn2paUuqKKi5Wyjkxfkp+D0rd0c3VrGwotidRINt6KpOi2smL4VkJKw==",
-      "path": "system.runtime.compilerservices.unsafe/4.5.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
@@ -934,12 +1024,12 @@
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
     },
-    "System.Text.Encoding.CodePages/4.5.0": {
+    "System.Text.Encoding.CodePages/4.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-16EVkWmNnoH3/Yj9c5s5VuLK5Uv/Dnkc3P2kMmnD7wJcUuvcHVvM2IhVJanf2hHRZUitH+cIkPCPHrBoCXc7Rw==",
-      "path": "system.text.encoding.codepages/4.5.0",
-      "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
+      "sha512": "sha512-ovuIZBR9ohouoh8diIkVa388XLPGuvgeBrxz8yF1JPR0gIAaD9xja8rWPuefx6QsZzo5KnAIMIog9pxIO9senA==",
+      "path": "system.text.encoding.codepages/4.5.1",
+      "hashPath": "system.text.encoding.codepages.4.5.1.nupkg.sha512"
     },
     "System.Text.Encoding.Extensions/4.3.0": {
       "type": "package",
@@ -965,48 +1055,60 @@
     "System.Threading.Thread/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
+      "sha512": "sha512-I+n/MDj32wd++IrRIo6D+i/S4IwImmaWU/Y1Ji2JPVpZKgYLBCc72sgNoVWuv/rvgiOdUFylRelJsEes2Lg6zw==",
       "path": "system.threading.thread/4.3.0",
       "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
     },
     "System.Threading.ThreadPool/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
+      "sha512": "sha512-Xh9OLyTbO+V4H9fd/AR8OD8SX1JQBVRJOUC8ICGkRqBPeI+puHGXlRCYYqAcO/BFErP40FFM+hcuqW1H4Wgmxg==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
     },
-    "NuKeeper.Abstractions/0.10.0": {
+    "Text.Analyzers/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UcSpZtr7TXPWj59F9WGZd7Edcm+ppBW4OeA/VuqX0RUJ6t/qgCqPfbRAJ/WbT5hcMHaI2pOn7kMbG5gOayravQ==",
+      "path": "text.analyzers/2.6.2",
+      "hashPath": "text.analyzers.2.6.2.nupkg.sha512"
+    },
+    "NuKeeper.Abstractions/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.AzureDevOps/0.10.0": {
+    "NuKeeper.AzureDevOps/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.BitBucket/0.10.0": {
+    "NuKeeper.BitBucket/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.Git/0.10.0": {
+    "NuKeeper.BitBucketLocal/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.GitHub/0.10.0": {
+    "NuKeeper.Git/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.Inspection/0.10.0": {
+    "NuKeeper.GitHub/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NuKeeper.Update/0.10.0": {
+    "NuKeeper.Inspection/0.10.1.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NuKeeper.Update/0.10.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
