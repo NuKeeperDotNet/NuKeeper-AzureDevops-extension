@@ -5,8 +5,7 @@ let https = require("follow-redirects").https;
 import fs = require("fs");
 import q = require("q");
 import { IncomingMessage } from "http";
-import * as extract from "extract-zip";
-import * as util from "util";
+import * as ttl from "vsts-task-tool-lib";
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
@@ -38,14 +37,8 @@ async function run() {
    try {
         let localFilePath = path.join(__dirname, './', "nukeeper.nupkg");
         await downloadFile("https://www.nuget.org/api/v2/package/NuKeeper", localFilePath);
+        await ttl.extractZip(path.join(__dirname, './', 'nukeeper.nupkg'), path.resolve(__dirname, './nukeeper'));
         
-        let unzipOptions: extract.Options = {
-            dir: path.join(__dirname, "./nukeeper")
-        };
-
-        let extractPromise = util.promisify(extract);
-        await extractPromise(localFilePath, unzipOptions);
-
         tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
             tl.exec("git", ["pull"]);
             tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
