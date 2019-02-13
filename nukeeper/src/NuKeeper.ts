@@ -1,7 +1,11 @@
 import * as path from 'path';
 import * as tl from 'vsts-task-lib';
 import * as tr from 'vsts-task-lib/toolrunner';
-import * as ttl from 'vsts-task-tool-lib';
+let https = require("follow-redirects").https;
+import fs = require("fs");
+import q = require("q");
+import { IncomingMessage } from "http";
+import * as extract from "extract-zip";
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
@@ -14,10 +18,30 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
     }
 }
 
+async function downloadFile(url: string, dest: string): q.Promise<any> {
+    let deferal = q.defer<any>();
+    let file = fs.createWriteStream(dest);
+    https.get(url, (response: IncomingMessage) => {
+        response.pipe(file);
+        file.on("finish", () => {
+            deferal.resolve();
+        });
+    }).on("error", (err: any) => {
+        deferal.reject(err);
+    });
+
+    return deferal.promise;
+}
+
 async function run() {
    try {
-        tl.execSync("curl", ["-L", "https://www.nuget.org/api/v2/package/NuKeeper", "--output", path.join(__dirname, './', "nukeeper.nupkg")]);
-        await ttl.extractZip(path.join(__dirname, './', 'nukeeper.nupkg'), path.resolve(__dirname, './nukeeper'));
+        let localFilePath = path.join(__dirname, './', "nukeeper.nupkg");
+        await downloadFile("https://www.nuget.org/api/v2/package/NuKeeper", localFilePath);
+        
+        let unzipOptions: extract.Options = {
+            dir: path.join(__dirname, "./nukeeper")
+        };
+        extract(localFilePath, unzipOptions, (err: Error) => tl.setResult(tl.TaskResult.Failed, err.message));
       
         tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
         tl.exec("git", ["pull"]);
