@@ -38,10 +38,7 @@
   },
   "homepage": "https://github.com/NuKeeperDotNet/NuKeeperAzureDevOps#readme",
   "dependencies": {
-    "@types/extract-zip": "^1.6.2",
     "azure-pipelines-tool-lib": "^0.11.0",
-    "follow-redirects": "1.6.1",
-    "q": "1.5.1",
     "vsts-task-tool-lib": "^0.10.0"
   }
 }
