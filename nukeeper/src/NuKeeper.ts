@@ -1,7 +1,7 @@
 import * as path from 'path';
-import * as tl from 'vsts-task-lib';
-import * as tr from 'vsts-task-lib/toolrunner';
-import * as ttl from "azure-pipelines-tool-lib";
+import * as tl from 'azure-pipelines-task-lib';
+import * as tr from 'azure-pipelines-task-lib/toolrunner';
+import * as ttl from 'azure-pipelines-tool-lib';
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
@@ -14,16 +14,14 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
     }
 }
 
-
 async function run() {
    try {
         let downPath: string = await ttl.downloadTool("https://www.nuget.org/api/v2/package/NuKeeper", "nukeeper.nupkg");
         await ttl.extractZip(downPath, path.resolve(__dirname, './nukeeper'));
         
-        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
-        tl.exec("git", ["pull"]);
-        tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
-        tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
+        tl.execSync("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
+        tl.execSync("git", ["config", "--global", "user.name", "NuKeeper"]);
+        tl.execSync("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
     
         tl.cd(tl.getVariable('Build.SourcesDirectory'));
     
