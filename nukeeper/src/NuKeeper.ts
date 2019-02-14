@@ -36,21 +36,25 @@ async function downloadFile(url: string, dest: string): q.Promise<any> {
 async function run() {
    try {
         let localFilePath = path.join(__dirname, './', "nukeeper.nupkg");
-        await downloadFile("https://www.nuget.org/api/v2/package/NuKeeper", localFilePath);
-        await ttl.extractZip(path.join(__dirname, './', 'nukeeper.nupkg'), path.resolve(__dirname, './nukeeper'));
+        let extractionPath = path.resolve(__dirname, './nukeeper');
+        
+        if (!fs.existsSync(extractionPath)) {
+            await downloadFile("https://www.nuget.org/api/v2/package/NuKeeper", localFilePath);
+            await ttl.extractZip(path.join(__dirname, './', 'nukeeper.nupkg'), path.resolve(__dirname, './nukeeper'));
+        }
         
         tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
-            tl.exec("git", ["pull"]);
-            tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
-            tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
+        tl.exec("git", ["pull"]);
+        tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
+        tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
     
-            tl.cd(tl.getVariable('Build.SourcesDirectory'));
+        tl.cd(tl.getVariable('Build.SourcesDirectory'));
     
-            let token = tl.getEndpointAuthorizationParameter("SystemVssConnection", "AccessToken", false);
-           
-            await execNuKeeper(['repo', tl.cwd(), token]);
-           
-            tl.setResult(tl.TaskResult.Succeeded, "done");
+        let token = tl.getEndpointAuthorizationParameter("SystemVssConnection", "AccessToken", false);
+        
+        await execNuKeeper(['repo', tl.cwd(), token]);
+        
+        tl.setResult(tl.TaskResult.Succeeded, "done");
     }
     catch (err) {
         tl.setResult(tl.TaskResult.Failed, err)
