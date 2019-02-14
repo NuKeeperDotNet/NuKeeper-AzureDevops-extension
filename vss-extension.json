@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "nukeeper",
     "name": "NuKeeper",
-    "version": "0.1.69",
+    "version": "0.1.691",
     "publisher": "nukeeper",
     "public": true,
     "targets": [
