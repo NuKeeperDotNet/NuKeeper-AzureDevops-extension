@@ -13,6 +13,8 @@
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/mz": "0.0.32",
+    "@types/node": "^11.9.4",
+    "@types/q": "^1.5.1",
     "@types/sinon": "^5.0.5",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
@@ -38,6 +40,7 @@
   },
   "homepage": "https://github.com/NuKeeperDotNet/NuKeeperAzureDevOps#readme",
   "dependencies": {
-    "azure-pipelines-tool-lib": "^0.11.0",
+    "azure-pipelines-task-lib": "^2.7.7",
+    "azure-pipelines-tool-lib": "^0.11.0"
   }
 }
