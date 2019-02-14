@@ -43,10 +43,10 @@ async function run() {
             await ttl.extractZip(path.join(__dirname, './', 'nukeeper.nupkg'), path.resolve(__dirname, './nukeeper'));
         }
         
-        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
-        tl.exec("git", ["pull"]);
-        tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
-        tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
+        tl.execSync("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
+        tl.execSync("git", ["pull"]);
+        tl.execSync("git", ["config", "--global", "user.name", "NuKeeper"]);
+        tl.execSync("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
     
         tl.cd(tl.getVariable('Build.SourcesDirectory'));
     
