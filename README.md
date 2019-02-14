@@ -24,6 +24,5 @@ Give it the following rights:
 - Contribute	Allow
 - Contribute to pull requests	Allow
 - Create branch	Allow
-- Create repository Allow
 
 That should do it.
