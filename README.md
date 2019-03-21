@@ -25,4 +25,8 @@ Give it the following rights:
 - Contribute to pull requests	Allow
 - Create branch	Allow
 
+Allow NuKeeper your build agent to access the oauth token:
+
+![Oauth checkmark](./images/oauth_checkmark.png)
+
 That should do it.

@@ -24,11 +24,12 @@ async function run() {
             await ttl.extractZip(downPath, extractionPath);
         }
 
-        tl.execSync("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
-        tl.execSync("git", ["pull"]);
-        tl.execSync("git", ["config", "--global", "user.name", "NuKeeper"]);
-        tl.execSync("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
+        await tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
+        await tl.exec("git", ["pull"]);
+        await tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
+        await tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
     
+        
         tl.cd(tl.getVariable('Build.SourcesDirectory'));
     
         let token = tl.getEndpointAuthorizationParameter("SystemVssConnection", "AccessToken", false);
