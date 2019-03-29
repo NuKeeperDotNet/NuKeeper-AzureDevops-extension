@@ -8,6 +8,7 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
         return new tr.ToolRunner(tl.which("dotnet"))
             .arg([path.join(tl.getVariable('Agent.TempDirectory'), './nukeeper/tools/netcoreapp2.1/any', 'NuKeeper.dll')].concat(args))
+            .arg(["--targetBranch", "/origin/" + tl.getVariable('Build.SourceBranchName')])
             .line(tl.getInput("arguments"))
             .exec();
     } catch (err){
@@ -24,11 +25,8 @@ async function run() {
             await ttl.extractZip(downPath, extractionPath);
         }
 
-        await tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]);
-        await tl.exec("git", ["pull"]);
         await tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
         await tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
-    
         
         tl.cd(tl.getVariable('Build.SourcesDirectory'));
     
