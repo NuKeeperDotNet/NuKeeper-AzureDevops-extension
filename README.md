@@ -11,22 +11,4 @@ You will find it [here in the Visual Studio marketplace](https://marketplace.vis
 It's up to the user to schedule the pipeline in whatever is correct for their solution.
 
 
-### Installation
-
-Once installed you still have to give the extension access rights:
-
-- Go to "Project settings" in your AzureDevops home screen.
-- Click repositories
-- Click Git repositories
-- Click the build service User(the bottom one, something like: Project collection build service)
-
-Give it the following rights:
-- Contribute	Allow
-- Contribute to pull requests	Allow
-- Create branch	Allow
-
-Allow NuKeeper your build agent to access the oauth token:
-
-![Oauth checkmark](./images/oauth_checkmark.png)
-
-That should do it.
+[See the website for installation instructions](https://nukeeper.com/platform/azure-devops/#extension)
