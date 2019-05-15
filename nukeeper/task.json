@@ -2,9 +2,9 @@
     "id": "e5a17a66-903f-46a9-a9b9-94241bcedc39",
     "name": "NuKeeper",
     "friendlyName": "NuKeeper",
-    "description": "Version 0.4.0",
+    "description": "Version 0.4.2",
     "helpMarkDown": "For help please visit https://github.com/NuKeeperDotNet/NuKeeper",
-    "category": "Tool",
+    "category": "Utility",
     "runsOn": [
         "Agent",
         "DeploymentGroup"
@@ -13,8 +13,15 @@
     "version": {
         "Major": 0,
         "Minor": 4,
-        "Patch": 0
-    },
+        "Patch": 2
+    }, 
+    "groups": [
+        {
+          "name": "Version",
+          "displayName": "NuKeeper version",
+          "isExpanded": false
+        }
+    ],
     "demands": [],
     "instanceNameFormat": "NuKeeper",
     "inputs": [
@@ -28,14 +35,16 @@
         },
         {
             "name": "version",
+            "groupName": "Version",
             "type": "string",
-            "label": "Version",
+            "label": "NuKeeper Version",
             "defaultValue": "0.*",
             "helpMarkDown": "Specify which `NuKeeper` version you want to use. `*` is latest, `x` is first match, examples: `0.2.x`, `>=0.1.x`, `0.*`. ",
             "required": true
           },
           {
             "name": "checkLatest",
+            "groupName": "Version",
             "type": "boolean",
             "label": "Auto update",
             "defaultValue": "true",
@@ -45,7 +54,7 @@
     ],
     "execution": {
         "Node": {
-            "target": "src/NuKeeper.js",
+            "target": "src/nukeeper.js",
             "argumentFormat": ""
         }
     },
