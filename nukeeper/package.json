@@ -22,7 +22,7 @@
     "sinon": "^7.1.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
-    "typestrict": "^1.0.1"
+    "typestrict": "^1.0.2"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,8 @@
   "homepage": "https://github.com/NuKeeperDotNet/NuKeeperAzureDevOps#readme",
   "dependencies": {
     "azure-pipelines-task-lib": "^2.7.7",
-    "azure-pipelines-tool-lib": "^0.11.0"
+    "azure-pipelines-tool-lib": "^0.11.0",
+    "jsonpath": "^1.0.1",
+    "jsonpath-plus": "^0.18.1"
   }
 }
