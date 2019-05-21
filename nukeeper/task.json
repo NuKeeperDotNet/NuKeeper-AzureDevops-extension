@@ -2,7 +2,7 @@
     "id": "e5a17a66-903f-46a9-a9b9-94241bcedc39",
     "name": "NuKeeper",
     "friendlyName": "NuKeeper",
-    "description": "Version 0.4.3",
+    "description": "Version 0.4.6",
     "helpMarkDown": "For help please visit https://github.com/NuKeeperDotNet/NuKeeper",
     "category": "Utility",
     "runsOn": [
@@ -13,18 +13,32 @@
     "version": {
         "Major": 0,
         "Minor": 4,
-        "Patch": 3
+        "Patch": 6
     }, 
     "groups": [
         {
           "name": "Version",
           "displayName": "NuKeeper version",
           "isExpanded": false
+        },
+        {
+            "name": "Github",
+            "displayName": "Github settings",
+            "isExpanded": false
         }
     ],
     "demands": [],
     "instanceNameFormat": "NuKeeper",
     "inputs": [
+        {
+            "name": "gitHubConnection",
+            "type": "connectedService:github:OAuth,PersonalAccessToken",
+            "groupName": "Github",
+            "label": "GitHub connection (OAuth or PAT)",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Specify the name of the GitHub service connection to use to connect to the GitHub repository. The connection must be based on a GitHub user's OAuth or a GitHub personal access token. Learn more about service connections [here](https://aka.ms/AA3am5s)."
+        },
         {
           "name": "arguments",
           "type": "string",
@@ -32,6 +46,17 @@
           "defaultValue": "-m 3",
           "required": true,
           "helpMarkDown": "Append extra configuration options"
+        },
+        {
+            "name": "feed",
+            "type": "pickList",
+            "label": "Use packages from this Azure Artifacts feed",
+            "defaultValue": "",
+            "helpMarkDown": "Include the selected feed in the generated NuGet.config.",
+            "required": "false",
+            "properties": {
+                "EditableOptions": "True"
+            }
         },
         {
             "name": "version",
@@ -51,6 +76,16 @@
             "required": false,
             "helpMarkDown": "Automatically download the latest version."
       }
+    ],
+    "dataSourceBindings": 
+    [
+        {
+        "target": "feed",
+        "endpointId": "tfs:feed",
+        "endpointUrl": "{{endpoint.url}}/_apis/packaging/feeds",
+        "resultSelector": "jsonpath:$.value[*]",
+        "resultTemplate": "{ \"Value\" : \"{{#if project}}{{{project.id}}}{{/if}}\\/{{{id}}}\", \"DisplayValue\" : \"{{{name}}}\" }"
+        }
     ],
     "execution": {
         "Node": {
