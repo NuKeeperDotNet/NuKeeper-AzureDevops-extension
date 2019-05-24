@@ -18,7 +18,7 @@
                 "AGENT_TOOLSDIRECTORY" : "${workspaceFolder}/tools",
                 "AGENT_TEMPDIRECTORY" : "${workspaceFolder}/temp",
                 "BUILD_SOURCESDIRECTORY" : "/",
-                "BUILD.SOURCEBRANCHNAME" : "master",
+                "BUILD_SOURCEBRANCHNAME" : "master",
                 "INPUT_version" : "0.*",
                 "INPUT_checkLatest" : "false",
                 "INPUT_arguments" : "-m 3 -v d",
