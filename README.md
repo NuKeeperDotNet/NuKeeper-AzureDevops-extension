@@ -21,5 +21,5 @@ Adjust `.vscode/launch.json`:
 
 * Adjust the `BUILD_SOURCESDIRECTORY` for a path to a repo. 
 * Put a valid token in the `ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN` 
-* Go to the Visual studio debugger tab and run.
+* Go to the Visual studio debugger tab and run `Debug NuKeeper`
 * Check the Debug console for output
