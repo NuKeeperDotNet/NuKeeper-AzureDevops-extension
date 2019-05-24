@@ -6,7 +6,6 @@
       "no-floating-promises": {
         "severity": "warning",
         "options": [
-          true,
           "Promise"
         ]
       }

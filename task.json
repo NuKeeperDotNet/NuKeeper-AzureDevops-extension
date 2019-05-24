@@ -89,13 +89,13 @@
     ],
     "execution": {
         "Node": {
-            "target": "src/nukeeper.js",
+            "target": "bin/NuKeeper.js",
             "argumentFormat": ""
         }
     },
     "postjobexecution": {
         "Node": {
-            "target": "src/postdeploymentjob.js",
+            "target": "bin/postdeploymentjob.js",
             "argumentFormat": ""
         }
     }

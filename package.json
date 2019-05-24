@@ -17,6 +17,7 @@
     "@types/q": "^1.5.1",
     "@types/sinon": "^5.0.5",
     "chai": "^4.2.0",
+    "jsonpath": "^1.0.1",
     "mocha": "^5.2.0",
     "rmdir": "^1.2.0",
     "sinon": "^7.1.1",
@@ -40,8 +41,8 @@
   },
   "homepage": "https://github.com/NuKeeperDotNet/NuKeeperAzureDevOps#readme",
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.7.7",
+    "azure-pipelines-task-lib": "^2.8.0",
     "azure-pipelines-tool-lib": "^0.11.0",
-    "jsonpath": "^1.0.1"
+    "jsonpath-plus": "^0.19.0"
   }
 }

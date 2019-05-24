@@ -1,4 +1,3 @@
-
 import * as jsonPath from 'jsonpath';
 import * as toolLib from 'azure-pipelines-tool-lib';
 import * as tl from 'azure-pipelines-task-lib';
