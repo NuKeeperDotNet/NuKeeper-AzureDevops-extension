@@ -22,7 +22,8 @@
                 "INPUT_version" : "0.*",
                 "INPUT_checkLatest" : "false",
                 "INPUT_arguments" : "-m 3 -v d",
-            }
+            },
+            "outputCapture": "std"
         }
     ]
 }
