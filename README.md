@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/NuKeeperDotNet/NuKeeper.svg?branch=master)](https://travis-ci.org/NuKeeperDotNet/NuKeeper/)
 [![Gitter](https://img.shields.io/gitter/room/NuKeeperDotNet/Lobby.js.svg?maxAge=2592000)](https://gitter.im/NuKeeperDotNet/Lobby)
 
-### NuKeeper AzureDevops Extension
+# NuKeeper AzureDevops Extension
 
 This is the [NuKeeper](https://github.com/NuKeeperDotNet/NuKeeper) for [Azure DevOps](https://azure.microsoft.com/en-gb/services/devops/) / VSTS extension. It will allow you to run the NuKeeper command inside the users build pipeline.
 
@@ -12,3 +12,14 @@ It's up to the user to schedule the pipeline in whatever is correct for their so
 
 
 [See the website for installation instructions](https://nukeeper.com/platform/azure-devops/#extension)
+
+
+
+## Debugging the extension
+
+Adjust `.vscode/launch.json`:
+
+* Adjust the `BUILD_SOURCESDIRECTORY` for a path to a repo. 
+* Put a valid token in the `ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN` 
+* Go to the Visual studio debugger tab and run.
+* Check the Debug console for output
