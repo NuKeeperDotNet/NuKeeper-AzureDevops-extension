@@ -28,8 +28,7 @@ async function run() {
         await tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
         await tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
         
-        var sources = tl.getVariable('Build.SourcesDirectory');
-        tl.cd(sources);
+        tl.cd(tl.getVariable('Build.SourcesDirectory'));
         
         let token = await getToken();
         
