@@ -25,7 +25,6 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
 
 async function run() {
    try {
-        await tl.exec("git", "fetch");
         await tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
         await tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
         

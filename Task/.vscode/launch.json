@@ -8,13 +8,13 @@
             "type": "node",
             "request": "launch",
             "name": "Debug NuKeeper",
-            "program": "${workspaceFolder}/src/nukeeper.ts",
+            "program": "${workspaceFolder}/src/NuKeeper.ts",
             "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": [
                 "${workspaceFolder}/bin/*.js"
             ],
             "env": {
-                "ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN" : "parameters\":{\"AccessToken\":\"token\"},\"scheme\":\"OAuth\"}",
+                "ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN" : "my secret token",
                 "AGENT_TOOLSDIRECTORY" : "${workspaceFolder}/tools",
                 "AGENT_TEMPDIRECTORY" : "${workspaceFolder}/temp",
                 "BUILD_SOURCESDIRECTORY" : "/",
