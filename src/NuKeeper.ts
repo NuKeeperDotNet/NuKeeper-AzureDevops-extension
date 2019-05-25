@@ -1,8 +1,9 @@
 import * as path from 'path';
 import * as tl from 'azure-pipelines-task-lib';
 import * as tr from 'azure-pipelines-task-lib/toolrunner';
-import getNuKeeper  from './installer';
-import getToken from './tokenprovider';
+import getNuKeeper  from './VersionInstaller';
+import getToken from './TokenProvider';
+import createFeed from './FeedInstaller';
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
@@ -32,6 +33,8 @@ async function run() {
         
         let token = await getToken();
         
+        await createFeed("feed");
+
         await execNuKeeper(['repo', tl.cwd(), token]);
         
         tl.setResult(tl.TaskResult.Succeeded, "done");
