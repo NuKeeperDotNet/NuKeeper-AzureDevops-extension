@@ -2,7 +2,7 @@
     "id": "e5a17a66-903f-46a9-a9b9-94241bcedc39",
     "name": "NuKeeper",
     "friendlyName": "NuKeeper",
-    "description": "Version 0.4.8",
+    "description": "Version 0.4.32",
     "helpMarkDown": "For help please visit https://github.com/NuKeeperDotNet/NuKeeper",
     "category": "Utility",
     "runsOn": [
@@ -13,13 +13,13 @@
     "version": {
         "Major": 0,
         "Minor": 4,
-        "Patch": 8
+        "Patch": 32
     }, 
     "groups": [
         {
-          "name": "Version",
-          "displayName": "NuKeeper version",
-          "isExpanded": false
+            "name": "AzureDevops",
+            "displayName": "AzureDevops settings",
+            "isExpanded": false
         },
         {
             "name": "Github",
@@ -50,6 +50,7 @@
         {
             "name": "feed",
             "type": "pickList",
+            "groupName" : "AzureDevops",
             "label": "Beta: use packages from this Azure Artifacts feed",
             "defaultValue": "",
             "helpMarkDown": "Include the selected feed in the generated NuGet.config.",
@@ -59,15 +60,22 @@
             }
         },
         {
+            "name": "targetFolder",
+            "type": "filePath",
+            "label": "Target folder",
+            "required": false,
+            "defaultValue" : "",
+            "helpMarkDown": "Set the root folder from where NuKeeper should execute"
+        },
+        {
             "name": "version",
-            "groupName": "Version",
             "type": "string",
             "label": "NuKeeper Version",
             "defaultValue": "0.*",
             "helpMarkDown": "Specify which `NuKeeper` version you want to use. `*` is latest, `x` is first match, examples: `0.2.x`, `>=0.1.x`, `0.*`. ",
             "required": true
-          },
-          {
+        },
+        {
             "name": "checkLatest",
             "groupName": "Version",
             "type": "boolean",
@@ -75,7 +83,7 @@
             "defaultValue": "true",
             "required": false,
             "helpMarkDown": "Automatically download the latest version."
-      }
+        }
     ],
     "dataSourceBindings": 
     [

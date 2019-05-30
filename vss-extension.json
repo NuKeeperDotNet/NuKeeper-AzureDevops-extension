@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "nukeeper",
     "name": "NuKeeper",
-    "version": "0.4.8",
+    "version": "0.4.32",
     "publisher": "nukeeper",
     "public": true,
     "targets": [
@@ -19,7 +19,7 @@
     },
     "files": [
         {
-            "path": "Task/task.json"
+            "path": "nukeeper"
         }
     ],
     "content": {

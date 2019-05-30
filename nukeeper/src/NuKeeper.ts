@@ -11,6 +11,7 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
         const checkLatest = tl.getBoolInput("checkLatest", false) || false;
         
         const nukeeperPath = await getNuKeeper(version, checkLatest);
+        await createFeed("feed", nukeeperPath);
 
         return new tr.ToolRunner(tl.which("dotnet"))
             .arg([path.join(nukeeperPath, 'NuKeeper.dll')].concat(args))
@@ -28,12 +29,19 @@ async function run() {
         await tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
         await tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
         
-        tl.cd(tl.getVariable('Build.SourcesDirectory'));
+        var path: string = tl.getPathInput('targetFolder');
+        if(path)
+        {
+            tl.cd(path);
+        } else 
+        {
+            tl.cd(tl.getVariable('Build.SourcesDirectory'));
+        }
         
         let token = await getToken();
+       
         
-        await createFeed("feed");
-
+        var path: string = tl.getPathInput('targetFolder');
         await execNuKeeper(['repo', tl.cwd(), token]);
         
         tl.setResult(tl.TaskResult.Succeeded, "done");

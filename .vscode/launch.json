@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Debug NuKeeper",
-            "program": "${workspaceFolder}/src/NuKeeper.ts",
+            "program": "${workspaceFolder}/nukeeper/src/NuKeeper.ts",
             "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": [
                 "${workspaceFolder}/bin/*.js"
@@ -17,12 +17,16 @@
                 "ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN" : "my secret token",
                 "AGENT_TOOLSDIRECTORY" : "${workspaceFolder}/tools",
                 "AGENT_TEMPDIRECTORY" : "${workspaceFolder}/temp",
-                "BUILD_SOURCESDIRECTORY" : "/",
+                "BUILD_SOURCESDIRECTORY" : "C:\\Users\\marc\\Documents\\repos\\NuKeeper",
                 "BUILD_SOURCEBRANCHNAME" : "master",
-                "INPUT_FEED" : "",
+                "INPUT_FEED" : "Nightly",
                 "INPUT_version" : "0.*",
                 "INPUT_checkLatest" : "false",
                 "INPUT_arguments" : "-m 3 -v d",
+                "INPUT_targetFolder" : "",
+                "SYSTEM_TEAMFOUNDATIONCOLLECTIONURI" : "https://dev.azure.com/nukeeper/",
+                "SYSTEM_ACCESSTOKEN" : "",
+                "PIPELINE_WORKSPACE" : "C:\\Users\\marc\\Documents\\repos\\NuKeeper"
             },
             "outputCapture": "std"
         }
