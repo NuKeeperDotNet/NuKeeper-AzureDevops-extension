@@ -21,6 +21,7 @@ It's up to the user to schedule the pipeline in whatever is correct for their so
 ### Debugging the extension
 
 Run `npm install` in root folder.
+
 Create a folder named `temp` in the root folder.
 
 Adjust `.vscode/launch.json`:
