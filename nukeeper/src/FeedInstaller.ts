@@ -68,16 +68,17 @@ async function getPackageSource(feedId: string, accessToken : string) : Promise<
                 organisationUrl = overwritePackagingCollectionUrl;
             }
             
-
             var parts = organisationUrl.split("/");
             let organisation : string; 
             
-            if(parts.length > 3)
+            if (parts.length === 3)
             {
-                organisation = parts[3]; //new style: dev.azure.com/x/
-            } else
+                organisation = parts[3]; //new style: https://dev.azure.com/x/
+            }
+            
+            if (parts.length === 4)
             {
-                organisation = parts[2].split(".")[0]; //old style: x.visualstudio.com
+                organisation = parts[2].split(".")[0]; //old style: https://x.visualstudio.com/
             }
 
             var url = `https://pkgs.dev.azure.com/${organisation}/_packaging/${feedId}/nuget/v3/index.json`;
