@@ -13,13 +13,21 @@ It's up to the user to schedule the pipeline in whatever is correct for their so
 
 [See the website for installation instructions](https://nukeeper.com/platform/azure-devops/#extension)
 
+## Development
 
+### Prerequisites
+- npm
 
-## Debugging the extension
+### Debugging the extension
+
+Run `npm install` in root folder.
 
 Adjust `.vscode/launch.json`:
-
 * Adjust the `BUILD_SOURCESDIRECTORY` for a path to a repo. 
-* Put a valid token in the `ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN` 
-* Go to the Visual studio debugger tab and run `Debug NuKeeper`
-* Check the Debug console for output
+* Put a valid token in the `ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN`
+
+Open the root folder in Visual Studio Code.
+
+Go to the debugger tab and click `Debug NuKeeper`.
+
+>Check the Debug console for output
