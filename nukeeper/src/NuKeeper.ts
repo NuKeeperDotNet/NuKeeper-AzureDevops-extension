@@ -1,14 +1,24 @@
-
 import * as path from 'path';
-import * as tl from 'vsts-task-lib';
-import * as tr from 'vsts-task-lib/toolrunner';
+import * as tl from 'azure-pipelines-task-lib';
+import * as tr from 'azure-pipelines-task-lib/toolrunner';
+import getNuKeeper  from './VersionInstaller';
+import getToken from './TokenProvider';
+import createFeed from './FeedInstaller';
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
+        const version = tl.getInput("version", false);
+        const checkLatest = tl.getBoolInput("checkLatest", false) || false;
+        
+        const nukeeperPath = await getNuKeeper(version, checkLatest);
+        await createFeed("feed", nukeeperPath);
+
         return new tr.ToolRunner(tl.which("dotnet"))
-            .arg([path.join(__dirname, '..', 'bin', 'NuKeeper.dll')].concat(args))
+            .arg([path.join(nukeeperPath, 'NuKeeper.dll')].concat(args))
+            .arg(["--targetBranch", "origin/" + tl.getVariable('Build.SourceBranchName')])
             .line(tl.getInput("arguments"))
             .exec();
+
     } catch (err){
         throw err;
     }
@@ -16,16 +26,24 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
 
 async function run() {
    try {
-        tl.exec("git", ["checkout", tl.getVariable('Build.SourceBranchName')]); 
-        tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
-        tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
-
-        tl.cd(tl.getVariable('Build.SourcesDirectory'));
-
-        let token = tl.getEndpointAuthorizationParameter("SystemVssConnection", "AccessToken", false);
+        await tl.exec("git", ["config", "--global", "user.name", "NuKeeper"]);
+        await tl.exec("git", ["config", "--global", "user.email", "nukeeper@nukeeper.com"]);
+        
+        var path: string = tl.getPathInput('targetFolder');
+        if(path)
+        {
+            tl.cd(path);
+        } else 
+        {
+            tl.cd(tl.getVariable('Build.SourcesDirectory'));
+        }
+        
+        let token = await getToken();
        
+        
+        var path: string = tl.getPathInput('targetFolder');
         await execNuKeeper(['repo', tl.cwd(), token]);
-       
+        
         tl.setResult(tl.TaskResult.Succeeded, "done");
     }
     catch (err) {

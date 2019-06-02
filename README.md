@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/NuKeeperDotNet/NuKeeper.svg?branch=master)](https://travis-ci.org/NuKeeperDotNet/NuKeeper/)
 [![Gitter](https://img.shields.io/gitter/room/NuKeeperDotNet/Lobby.js.svg?maxAge=2592000)](https://gitter.im/NuKeeperDotNet/Lobby)
 
-### NuKeeper AzureDevops Extension
+# NuKeeper AzureDevops Extension
 
 This is the [NuKeeper](https://github.com/NuKeeperDotNet/NuKeeper) for [Azure DevOps](https://azure.microsoft.com/en-gb/services/devops/) / VSTS extension. It will allow you to run the NuKeeper command inside the users build pipeline.
 
@@ -11,19 +11,15 @@ You will find it [here in the Visual Studio marketplace](https://marketplace.vis
 It's up to the user to schedule the pipeline in whatever is correct for their solution.
 
 
-### Installation
+[See the website for installation instructions](https://nukeeper.com/platform/azure-devops/#extension)
 
-Once installed you still have to give the extension access rights:
 
-- Go to "Project settings" in your ADO home screen.
-- Click repositories
-- Click Git repositories
-- Click the build service User(the bottom one, something like: Project collection build service)
 
-Give it the following rights:
-- Contribute	Allow
-- Contribute to pull requests	Allow
-- Create branch	Allow
-- Create repository Allow
+## Debugging the extension
 
-That should do it.
+Adjust `.vscode/launch.json`:
+
+* Adjust the `BUILD_SOURCESDIRECTORY` for a path to a repo. 
+* Put a valid token in the `ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN` 
+* Go to the Visual studio debugger tab and run `Debug NuKeeper`
+* Check the Debug console for output

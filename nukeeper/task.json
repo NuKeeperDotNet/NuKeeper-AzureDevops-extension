@@ -2,8 +2,9 @@
     "id": "e5a17a66-903f-46a9-a9b9-94241bcedc39",
     "name": "NuKeeper",
     "friendlyName": "NuKeeper",
-    "description": "Automagically update nuget packages in .NET projects",
-    "category": "Tool",
+    "description": "Version 0.4.32",
+    "helpMarkDown": "For help please visit https://github.com/NuKeeperDotNet/NuKeeper",
+    "category": "Utility",
     "runsOn": [
         "Agent",
         "DeploymentGroup"
@@ -11,30 +12,98 @@
     "author": "NuKeeper",
     "version": {
         "Major": 0,
-        "Minor": 1,
-        "Patch": 42
-    },
+        "Minor": 4,
+        "Patch": 32
+    }, 
+    "groups": [
+        {
+            "name": "AzureDevops",
+            "displayName": "AzureDevops settings",
+            "isExpanded": false
+        },
+        {
+            "name": "Github",
+            "displayName": "Github settings",
+            "isExpanded": false
+        }
+    ],
     "demands": [],
     "instanceNameFormat": "NuKeeper",
     "inputs": [
         {
+            "name": "gitHubConnection",
+            "type": "connectedService:github:OAuth,PersonalAccessToken",
+            "groupName": "Github",
+            "label": "GitHub connection (OAuth or PAT)",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Specify the name of the GitHub service connection to use to connect to the GitHub repository. The connection must be based on a GitHub user's OAuth or a GitHub personal access token. Learn more about service connections [here](https://aka.ms/AA3am5s)."
+        },
+        {
           "name": "arguments",
           "type": "string",
           "label": "Arguments",
-          "defaultValue": "-p 3",
+          "defaultValue": "-m 3",
           "required": true,
           "helpMarkDown": "Append extra configuration options"
+        },
+        {
+            "name": "feed",
+            "type": "pickList",
+            "groupName" : "AzureDevops",
+            "label": "Beta: use packages from this Azure Artifacts feed",
+            "defaultValue": "",
+            "helpMarkDown": "Include the selected feed in the generated NuGet.config.",
+            "required": "false",
+            "properties": {
+                "EditableOptions": "True"
+            }
+        },
+        {
+            "name": "targetFolder",
+            "type": "filePath",
+            "label": "Target folder",
+            "required": false,
+            "defaultValue" : "",
+            "helpMarkDown": "Set the root folder from where NuKeeper should execute"
+        },
+        {
+            "name": "version",
+            "type": "string",
+            "label": "NuKeeper Version",
+            "defaultValue": "0.*",
+            "helpMarkDown": "Specify which `NuKeeper` version you want to use. `*` is latest, `x` is first match, examples: `0.2.x`, `>=0.1.x`, `0.*`. ",
+            "required": true
+        },
+        {
+            "name": "checkLatest",
+            "groupName": "Version",
+            "type": "boolean",
+            "label": "Auto update",
+            "defaultValue": "true",
+            "required": false,
+            "helpMarkDown": "Automatically download the latest version."
+        }
+    ],
+    "dataSourceBindings": 
+    [
+        {
+        "target": "feed",
+        "endpointId": "tfs:feed",
+        "endpointUrl": "{{endpoint.url}}/_apis/packaging/feeds",
+        "resultSelector": "jsonpath:$.value[*]",
+        "resultTemplate": "{ \"Value\" : \"{{#if project}}{{{project.id}}}{{/if}}\\/{{{id}}}\", \"DisplayValue\" : \"{{{name}}}\" }"
         }
     ],
     "execution": {
         "Node": {
-            "target": "src/NuKeeper.js",
+            "target": "bin/NuKeeper.js",
             "argumentFormat": ""
         }
     },
     "postjobexecution": {
         "Node": {
-            "target": "src/postdeploymentjob.js",
+            "target": "bin/postdeploymentjob.js",
             "argumentFormat": ""
         }
     }
