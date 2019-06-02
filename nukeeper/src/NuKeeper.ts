@@ -13,9 +13,15 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
         const nukeeperPath = await getNuKeeper(version, checkLatest);
         await createFeed("feed", nukeeperPath);
 
+        // Get target branch.
+        // For reference: https://github.com/microsoft/azure-pipelines-agent/issues/838#issuecomment-403151822
+        const sourceBranch = tl.getVariable('Build.SourceBranch');
+        const targetBranch = "origin/" + sourceBranch.substring(sourceBranch.indexOf('/', 5) + 1);
+        tl.debug(`Used target branch: '${targetBranch}'`);
+        
         return new tr.ToolRunner(tl.which("dotnet"))
             .arg([path.join(nukeeperPath, 'NuKeeper.dll')].concat(args))
-            .arg(["--targetBranch", "origin/" + tl.getVariable('Build.SourceBranchName')])
+            .arg(["--targetBranch", targetBranch])
             .line(tl.getInput("arguments"))
             .exec();
 
