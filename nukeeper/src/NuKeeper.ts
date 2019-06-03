@@ -45,9 +45,6 @@ async function run() {
         }
         
         let token = await getToken();
-       
-        
-        var path: string = tl.getPathInput('targetFolder');
         await execNuKeeper(['repo', tl.cwd(), token]);
         
         tl.setResult(tl.TaskResult.Succeeded, "done");
