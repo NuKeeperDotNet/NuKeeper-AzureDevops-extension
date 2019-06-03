@@ -68,18 +68,7 @@ async function getPackageSource(feedId: string, accessToken : string) : Promise<
                 organisationUrl = overwritePackagingCollectionUrl;
             }
             
-
-            var parts = organisationUrl.split("/");
-            let organisation : string; 
-            
-            if(parts.length > 3)
-            {
-                organisation = parts[3]; //new style: dev.azure.com/x/
-            } else
-            {
-                organisation = parts[2].split(".")[0]; //old style: x.visualstudio.com
-            }
-
+            let organisation = getOrganisation(organisationUrl);
             var url = `https://pkgs.dev.azure.com/${organisation}/_packaging/${feedId}/nuget/v3/index.json`;
            
             tl.debug("Feed registry url: " + url);
@@ -120,6 +109,29 @@ function createEmptyNugetConfig (packageSource: IPackageSource, accessToken: str
     .up()
     .end({ pretty: true});
     return xml
+}
+
+function getOrganisation (organisationUrl: string) : string
+{
+    let parts = organisationUrl.split("/");
+
+    // Check for new style: https://dev.azure.com/x/
+    if (parts.length === 5)
+    {
+        return parts[3];
+    }
+    
+    // Check for old style: https://x.visualstudio.com/
+    if (parts.length === 4)
+    {
+        // Get x.visualstudio.com part.
+        let part = parts[2];
+
+        // Return organisation part (x).
+        return part.split(".")[0];
+    }
+
+    tl.setResult(tl.TaskResult.Failed, `Error parsing organisation from organisation url: '${organisationUrl}'.`);
 }
 
 export async function deleteNugetConfig()
