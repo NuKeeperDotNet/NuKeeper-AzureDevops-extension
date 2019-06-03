@@ -18,6 +18,7 @@
                 "AGENT_TOOLSDIRECTORY" : "${workspaceFolder}/tools",
                 "AGENT_TEMPDIRECTORY" : "${workspaceFolder}/temp",
                 "BUILD_SOURCESDIRECTORY" : "C:\\Users\\marc\\Documents\\repos\\NuKeeper",
+                "BUILD_SOURCEBRANCH": "refs/heads/master",
                 "BUILD_SOURCEBRANCHNAME" : "master",
                 "INPUT_FEED" : "Nightly",
                 "INPUT_version" : "0.*",
