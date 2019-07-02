@@ -13,7 +13,11 @@ export interface IPackageSource {
     feedUri: string;
 }
 
-const nugetConfigPath = path.join(tl.getVariable('Pipeline.Workspace'), "NuGet.config");
+const workspace = tl.getVariables().some(x => x.name === 'Pipeline.Workspace') ? 
+    tl.getVariable('Pipeline.Workspace') : 
+    tl.getVariable('Agent.BuildDirectory');
+    
+const nugetConfigPath = path.join(workspace, "NuGet.config");
 
 export default async function createFeed(inputParam: string, nukeeperPath: string): Promise<any> {
     try {
