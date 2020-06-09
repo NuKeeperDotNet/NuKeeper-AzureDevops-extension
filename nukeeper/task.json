@@ -83,6 +83,15 @@
             "defaultValue": "true",
             "required": false,
             "helpMarkDown": "Automatically download the latest version."
+        },
+        {
+            "name": "targetBranch",
+            "groupName": "Version",
+            "type": "string",
+            "label": "Target branch",
+            "defaultValue": "false",
+            "required": false,
+            "helpMarkDown": "Specify which target branch you want to use."
         }
     ],
     "dataSourceBindings": 
