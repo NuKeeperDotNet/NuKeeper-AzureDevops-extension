@@ -4,8 +4,9 @@
   "description": "NuKeeper AzureDevOps task",
   "main": "''",
   "scripts": {
+    "mv": "@powershell Copy-Item -Force -Recurse .\\node_modules\\* .\\nukeeper\\node_modules\\ ",
     "build": "tsc -p . && tslint -p tsconfig.json",
-    "build:prod": "npm i && npm run build && npm prune --production && npm dedupe",
+    "build:prod": "npm i && npm run build && npm run mv",
     "pretest": "npm run build",
     "test": "mocha --recursive",
     "upload": "npm run build:prod && tfx build tasks upload --task-path ."
@@ -18,8 +19,7 @@
     "@types/sinon": "^5.0.5",
     "chai": "^4.2.0",
     "jsonpath": "^1.0.1",
-    "mocha": "^5.2.0",
-    "rmdir": "^1.2.0",
+    "mocha": "^8.0.1",
     "sinon": "^7.1.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
@@ -47,5 +47,8 @@
     "jsonpath-plus": "^0.19.0",
     "path": "^0.12.7",
     "xmlbuilder": "^13.0.2"
-  }
+  },
+  "files": [
+    "node_modules"
+  ]
 }

@@ -2,7 +2,7 @@
     "id": "e5a17a66-903f-46a9-a9b9-94241bcedc39",
     "name": "NuKeeper",
     "friendlyName": "NuKeeper",
-    "description": "Version 0.4.33",
+    "description": "Version 0.4.38",
     "helpMarkDown": "For help please visit https://github.com/NuKeeperDotNet/NuKeeper",
     "category": "Utility",
     "runsOn": [
@@ -13,7 +13,7 @@
     "version": {
         "Major": 0,
         "Minor": 4,
-        "Patch": 33
+        "Patch": 38
     }, 
     "groups": [
         {
@@ -51,7 +51,7 @@
             "name": "feed",
             "type": "pickList",
             "groupName" : "AzureDevops",
-            "label": "Beta: use packages from this Azure Artifacts feed",
+            "label": "Use packages from this Azure Artifacts feed",
             "defaultValue": "",
             "helpMarkDown": "Include the selected feed in the generated NuGet.config.",
             "required": "false",
@@ -83,15 +83,6 @@
             "defaultValue": "true",
             "required": false,
             "helpMarkDown": "Automatically download the latest version."
-        },
-        {
-            "name": "targetBranch",
-            "groupName": "Version",
-            "type": "string",
-            "label": "Target branch",
-            "defaultValue": "false",
-            "required": false,
-            "helpMarkDown": "Specify which target branch you want to use."
         }
     ],
     "dataSourceBindings": 

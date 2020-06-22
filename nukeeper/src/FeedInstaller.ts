@@ -2,15 +2,16 @@ import * as tl from 'azure-pipelines-task-lib';
 import * as path from "path";
 import * as fs from "fs";
 import * as builder from "xmlbuilder";
-import * as tr from 'azure-pipelines-task-lib/toolrunner';
 
 interface IFeedResponse {
     url: string;
 }
 
 export interface IPackageSource {
-    feedName: string;
-    feedUri: string;
+    projectFeedName: string;
+    projectFeedUri: string;
+    organisationFeedName: string;
+    organisationFeedUri: string;
 }
 
 const workspace = tl.getVariables().some(x => x.name === 'Pipeline.Workspace') ? 
@@ -73,13 +74,21 @@ async function getPackageSource(feedId: string, accessToken : string) : Promise<
             }
             
             let organisation = getOrganisation(organisationUrl);
-            var url = `https://pkgs.dev.azure.com/${organisation}/_packaging/${feedId}/nuget/v3/index.json`;
-           
-            tl.debug("Feed registry url: " + url);
+            
+            var projectUrl = `https://pkgs.dev.azure.com/${organisation}/_packaging/${feedId}/nuget/v3/index.json`;
+
+            var projectId = tl.getVariable("System.TeamProjectId") //the organisation scoped feed needs the projectId, not sure why
+            var organisationUrl = `https://pkgs.dev.azure.com/${organisation}/${projectId}/_packaging/${feedId}/nuget/v3/index.json`;
+        
+            tl.debug("Feed project url: " + projectUrl);
+            tl.debug("Feed organisation url: " + organisationUrl);
+
             return <IPackageSource>
             {
-                feedName: feedId,
-                feedUri: url
+                projectFeedName: "projectScoped",
+                projectFeedUri: projectUrl,
+                organisationFeedName: "organisationalScoped",
+                organisationFeedUri: organisationUrl
             }
         }
     } catch (err) {
@@ -94,9 +103,13 @@ async function createNugetConfig(xmlContent: string, nukeeperPath: string, packa
         //It also needs to be up the tree relative to the caller. The tree is searched for Nuget.Config up till the root of the machine
         fs.writeFileSync(nugetConfigPath, xmlContent);
 
-        var args = ["sources", "add", "-name", packageSource.feedName, "-source", packageSource.feedUri, "-username", "nukeeper", "-password", password, "-configFile", nugetConfigPath]
+        //Add project scoped
+        var args = ["sources", "add", "-name", packageSource.projectFeedName, "-source", packageSource.projectFeedUri, "-username", "nukeeper", "-password", password, "-configFile", nugetConfigPath]
         await tl.exec(path.join(nukeeperPath, 'NuGet.exe'), args);
 
+        //Add organisation scoped
+        var args = ["sources", "add", "-name", packageSource.organisationFeedName, "-source", packageSource.organisationFeedUri, "-username", "nukeeper", "-password", password, "-configFile", nugetConfigPath]
+        await tl.exec(path.join(nukeeperPath, 'NuGet.exe'), args);
     } catch (err) {
         tl.debug(err);
         tl.setResult(tl.TaskResult.Failed, "Error writting file temp nuget config");
