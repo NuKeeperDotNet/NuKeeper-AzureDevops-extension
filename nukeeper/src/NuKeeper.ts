@@ -4,6 +4,7 @@ import * as tr from 'azure-pipelines-task-lib/toolrunner';
 import getNuKeeper  from './VersionInstaller';
 import getToken from './TokenProvider';
 import createFeed from './FeedInstaller';
+import { debug } from 'console';
 
 async function execNuKeeper(args: string|string[]) : Promise<any>  {
     try {
@@ -36,7 +37,8 @@ async function execNuKeeper(args: string|string[]) : Promise<any>  {
                 .exec();
         }
     } catch (err){
-        throw err;
+        tl.error(err);
+        return process.exit(-1);
     }
 }
 
