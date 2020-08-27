@@ -8,10 +8,8 @@ interface IFeedResponse {
 }
 
 export interface IPackageSource {
-    projectFeedName: string;
-    projectFeedUri: string;
-    organisationFeedName: string;
-    organisationFeedUri: string;
+    feedName: string;
+    feedUri: string;
 }
 
 const workspace = tl.getVariables().some(x => x.name === 'Pipeline.Workspace') ? 
@@ -41,7 +39,7 @@ export default async function createFeed(inputParam: string, nukeeperPath: strin
         if(accessToken)
         {
             tl.debug("Getting package information..");
-            var packageSource = await getPackageSource(feedId, accessToken);
+            var packageSource = await getPackageSource(feedId, projectId, accessToken);
             tl.debug("Done getting package information..");
 
             tl.debug("Create local nuget config content");
@@ -62,7 +60,7 @@ export default async function createFeed(inputParam: string, nukeeperPath: strin
     }
 }
 
-async function getPackageSource(feedId: string, accessToken : string) : Promise<IPackageSource> {
+async function getPackageSource(feedId: string, projectId: string, accessToken : string) : Promise<IPackageSource> {
     try {
         if (feedId) {
             var organisationUrl = tl.getVariable("System.TeamFoundationCollectionUri"); //get the default package url
@@ -75,20 +73,23 @@ async function getPackageSource(feedId: string, accessToken : string) : Promise<
             
             let organisation = getOrganisation(organisationUrl);
             
-            var projectUrl = `https://pkgs.dev.azure.com/${organisation}/_packaging/${feedId}/nuget/v3/index.json`;
-
-            var projectId = tl.getVariable("System.TeamProjectId") //the organisation scoped feed needs the projectId, not sure why
-            var organisationUrl = `https://pkgs.dev.azure.com/${organisation}/${projectId}/_packaging/${feedId}/nuget/v3/index.json`;
+            var url = null;
+            var name = null;
+            if( projectId == null) {
+                url = `https://pkgs.dev.azure.com/${organisation}/_packaging/${feedId}/nuget/v3/index.json`;
+                name = 'organisationalScoped';
+            } else {
+                url = `https://pkgs.dev.azure.com/${organisation}/${projectId}/_packaging/${feedId}/nuget/v3/index.json`;
+                name  = 'projectScoped';
+            }
+          
         
-            tl.debug("Feed project url: " + projectUrl);
-            tl.debug("Feed organisation url: " + organisationUrl);
-
+            tl.debug("Feed url: " + url);
+        
             return <IPackageSource>
             {
-                projectFeedName: "projectScoped",
-                projectFeedUri: projectUrl,
-                organisationFeedName: "organisationalScoped",
-                organisationFeedUri: organisationUrl
+                feedName: name,
+                feedUri: url
             }
         }
     } catch (err) {
@@ -103,13 +104,9 @@ async function createNugetConfig(xmlContent: string, nukeeperPath: string, packa
         //It also needs to be up the tree relative to the caller. The tree is searched for Nuget.Config up till the root of the machine
         fs.writeFileSync(nugetConfigPath, xmlContent);
 
-        //Add project scoped
-        var args = ["sources", "add", "-name", packageSource.projectFeedName, "-source", packageSource.projectFeedUri, "-username", "nukeeper", "-password", password, "-configFile", nugetConfigPath]
+        var args = ["sources", "add", "-name", packageSource.feedName, "-source", packageSource.feedUri, "-username", "nukeeper", "-password", password, "-configFile", nugetConfigPath]
         await tl.exec(path.join(nukeeperPath, 'NuGet.exe'), args);
 
-        //Add organisation scoped
-        var args = ["sources", "add", "-name", packageSource.organisationFeedName, "-source", packageSource.organisationFeedUri, "-username", "nukeeper", "-password", password, "-configFile", nugetConfigPath]
-        await tl.exec(path.join(nukeeperPath, 'NuGet.exe'), args);
     } catch (err) {
         tl.debug(err);
         tl.setResult(tl.TaskResult.Failed, "Error writting file temp nuget config");
