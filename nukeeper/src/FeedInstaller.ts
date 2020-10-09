@@ -84,7 +84,7 @@ async function getPackageSource(feedId: string, projectId: string, accessToken :
             }
           
         
-            tl.debug("Feed url: " + url);
+            tl.debug("Feed url: ${ url }");
         
             return <IPackageSource>
             {
