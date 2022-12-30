@@ -19,7 +19,7 @@
     "@types/sinon": "^5.0.5",
     "chai": "^4.2.0",
     "jsonpath": "^1.0.1",
-    "mocha": "^8.0.1",
+    "mocha": "^8.4.0",
     "sinon": "^7.1.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
